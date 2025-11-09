@@ -1,0 +1,698 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Personal Portfolio</title>
+    <script src="https://cdn.tailwindcss.com"></script>
+    <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css" rel="stylesheet">
+    <style>
+        @import url('https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&display=swap');
+        
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+        
+        body {
+            font-family: 'Inter', sans-serif;
+            line-height: 1.6;
+            color: #333;
+            scroll-behavior: smooth;
+        }
+        
+        .gradient-bg {
+            background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
+        }
+        
+        .card-hover {
+            transition: all 0.3s ease;
+        }
+        
+        .card-hover:hover {
+            transform: translateY(-5px);
+            box-shadow: 0 20px 25px -5px rgba(0, 0, 0, 0.1), 0 10px 10px -5px rgba(0, 0, 0, 0.04);
+        }
+        
+        .skill-bar {
+            transition: width 2s ease-in-out;
+        }
+        
+        .typewriter {
+            overflow: hidden;
+            border-right: .15em solid #667eea;
+            white-space: nowrap;
+            animation: typing 3.5s steps(40, end), blink-caret .75s step-end infinite;
+        }
+        
+        @keyframes typing {
+            from { width: 0 }
+            to { width: 100% }
+        }
+        
+        @keyframes blink-caret {
+            from, to { border-color: transparent }
+            50% { border-color: #667eea }
+        }
+        
+        .floating {
+            animation: float 6s ease-in-out infinite;
+        }
+        
+        @keyframes float {
+            0% { transform: translateY(0px); }
+            50% { transform: translateY(-20px); }
+            100% { transform: translateY(0px); }
+        }
+    </style>
+</head>
+<body class="bg-gray-50">
+    <!-- Navigation -->
+    <nav class="fixed w-full bg-white shadow-lg z-50">
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+            <div class="flex justify-between h-16">
+                <div class="flex items-center">
+                    <span class="text-xl font-bold text-black-600">Nikhil Raghav</span>
+                </div>
+                
+                <div class="md:hidden flex items-center">
+                    <button id="menu-btn" class="text-gray-700">
+                        <i class="fas fa-bars text-xl"></i>
+                    </button>
+    </nav>
+        <!-- Hero Section -->
+        <section class="flex flex-col md:flex-row items-center gap-12 py-20">
+            <div class="md:w-2/5">
+                <img src="https://blogger.googleusercontent.com/img/b/R29vZ2xl/AVvXsEjWSbKBsLrTyP6Cfd3enX3mESkgGOf1owRADLChK9cPf5vfNs58OAV-Y7V0K7ByJanwI1f3DeSeKJ3NMSJIwfG3siRjq37yk7FHwwTFv2FiZ2KcMuRays16kpRjeRPfkrkq7NlTD4CsAkOndJdwxeF5amE6nixNmS8OK9I_29XKojsurdOpy6NFrIMj8-g/s1600/IMG_20230714_135839_478.jpg" 
+                     alt="Nikhil Raghav" 
+                     class="rounded-full w-80 h-80 object-cover border-4 border-blue-500 shadow-2xl mx-auto hover:scale-105 transition-transform duration-300">
+            </div>
+            <div class="md:w-3/5 text-center md:text-left">
+                <h1 class="text-5xl md:text-6xl font-bold text-gray-900 dark:text-gray-900 mb-6 leading-tight">Hello, I'm <span class="text-blue-500">NIKHIL RAGHAV</span></h1>
+                <h2 class="text-2xl md:text-3xl text-gray-600 dark:text-gray-900 mb-8 font-medium">Marketing Specialist & Hardware Networking Expert</h2>
+                <p class="text-xl text-gray-900 dark:text-gray-900 leading-relaxed max-w-3xl">
+                    Technology-driven professional with 8+ years of experience blending digital marketing strategy with hands-on hardware and networking expertise to deliver end-to-end business solutions. Certified in cybersecurity and digital marketing with a passion for creating secure, high-performance systems.
+                </p>
+                <div class="mt-12 flex flex-wrap gap-6 justify-center md:justify-start">
+                    <a href="#contact" class="bg-blue-500 hover:bg-blue-600 text-white px-8 py-4 rounded-lg font-medium text-lg transition-all transform hover:-translate-y-1 shadow-lg hover:shadow-xl">Get In Touch</a>
+                    <a href="#about" class="border-2 border-blue-500 text-blue-500 hover:bg-blue-50 dark:hover:bg-gray-800 px-8 py-4 rounded-lg font-medium text-lg transition-all transform hover:-translate-y-1">Learn More</a>
+                    <a href="#education" class="bg-gray-100 dark:bg-gray-700 hover:bg-gray-200 dark:hover:bg-gray-600 text-gray-800 dark:text-gray-300 px-8 py-4 rounded-lg font-medium text-lg transition-all transform hover:-translate-y-1">My Certifications</a>
+                </div>
+            </div>
+        </section>
+        <!-- About Section -->
+        <section id="about" class="relative">
+            <div class="absolute inset-0 bg-blue-50 dark:bg-gray-800 opacity-20 -z-10 rounded-3xl"></div>
+            <div class="container mx-auto px-4">
+                <h2 class="text-4xl md:text-5xl font-bold text-gray-800 dark:text-white mb-16 text-center">
+                    <span class="relative inline-block">
+                        About Me
+                        <span class="absolute bottom-0 left-0 w-full h-2  rounded-full"></span>
+                    </span>
+                </h2>
+                
+                <div class="bg-white dark:bg-gray-800 rounded-2xl shadow-xl p-12 hover-scale">
+                    <div class="grid md:grid-cols-2 gap-12">
+                        <div>
+                            <h3 class="text-2xl font-bold text-gray-800 dark:text-white mb-6">Professional Journey</h3>
+                            <p class="text-xl text-gray-700 dark:text-gray-300 mb-6 leading-relaxed">
+                                With over 8 years of hands-on experience, I've developed a unique hybrid skillset that bridges digital marketing strategy with technical IT infrastructure expertise. My career began in hardware networking before expanding into performance marketing, giving me a comprehensive understanding of both technical foundations and customer-facing digital solutions.
+                            </p>
+                            <p class="text-xl text-gray-700 dark:text-gray-300 leading-relaxed">
+                                Currently focused on cybersecurity through Cisco's certification programs while continuing to deliver data-driven marketing campaigns that drive measurable business growth.
+                            </p>
+                        </div>
+                        <div>
+                            <h3 class="text-2xl font-bold text-gray-800 dark:text-white mb-6">Core Competencies</h3>
+                            <ul class="space-y-4">
+                                <li class="flex items-start gap-3">
+                                    <div class="bg-blue-100 dark:bg-blue-900 p-2 rounded-full">
+                                        <i data-feather="shield" class="text-blue-500 dark:text-blue-300"></i>
+                                    </div>
+                                    <span class="text-xl text-gray-700 dark:text-gray-300">Cybersecurity & Network Defense</span>
+                                </li>
+                                <li class="flex items-start gap-3">
+                                    <div class="bg-blue-100 dark:bg-blue-900 p-2 rounded-full">
+                                        <i data-feather="bar-chart-2" class="text-blue-500 dark:text-blue-300"></i>
+                                    </div>
+                                    <span class="text-xl text-gray-700 dark:text-gray-300">Data-Driven Digital Marketing</span>
+                                </li>
+                                <li class="flex items-start gap-3">
+                                    <div class="bg-blue-100 dark:bg-blue-900 p-2 rounded-full">
+                                        <i data-feather="server" class="text-blue-500 dark:text-blue-300"></i>
+                                    </div>
+                                    <span class="text-xl text-gray-700 dark:text-gray-300">IT Infrastructure Management</span>
+                                </li>
+                                <li class="flex items-start gap-3">
+                                    <div class="bg-blue-100 dark:bg-blue-900 p-2 rounded-full">
+                                        <i data-feather="code" class="text-blue-500 dark:text-blue-300"></i>
+                                    </div>
+                                    <span class="text-xl text-gray-700 dark:text-gray-300">Technical Problem Solving</span>
+                                </li>
+                            </ul>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Stats -->
+                <div class="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-8 mt-16">
+                    <div class="bg-white dark:bg-gray-800 rounded-xl shadow-lg p-8 text-center hover-scale">
+                        <h3 class="text-5xl font-bold text-blue-500 mb-4">8+</h3>
+                        <p class="text-xl font-medium text-gray-700 dark:text-gray-300">Years Experience</p>
+                    </div>
+                    <div class="bg-white dark:bg-gray-800 rounded-xl shadow-lg p-8 text-center hover-scale">
+                        <h3 class="text-5xl font-bold text-blue-500 mb-4">50+</h3>
+                        <p class="text-xl font-medium text-gray-700 dark:text-gray-300">Projects Delivered</p>
+                    </div>
+                    <div class="bg-white dark:bg-gray-800 rounded-xl shadow-lg p-8 text-center hover-scale">
+                        <h3 class="text-5xl font-bold text-blue-500 mb-4">30+</h3>
+                        <p class="text-xl font-medium text-gray-700 dark:text-gray-300">Clients Served</p>
+                    </div>
+                    <div class="bg-white dark:bg-gray-800 rounded-xl shadow-lg p-8 text-center hover-scale">
+                        <h3 class="text-5xl font-bold text-blue-500 mb-4">5+</h3>
+                        <p class="text-xl font-medium text-gray-700 dark:text-gray-300">Security Certifications</p>
+                    </div>
+</div>
+        </section>
+        <!-- Skills Section -->
+        <section id="skills" class="py-20">
+            <div class="container mx-auto px-4">
+                <h2 class="text-4xl md:text-5xl font-bold text-gray-800 dark:text-black-600 mb-16 text-center">
+                    <span class="relative inline-block">
+                        My Expertise
+                        <span class="absolute bottom-0 left-0 w-full h-2  rounded-full"></span>
+                    </span>
+                </h2>
+
+                <div class="grid grid-cols-1 md:grid-cols-2 gap-12 max-w-6xl mx-auto">
+                    <!-- Technical Skills -->
+                    <div class="bg-white dark:bg-gray-800 rounded-2xl shadow-xl p-8 hover:shadow-2xl transition-shadow duration-300">
+                        <div class="flex items-center gap-3 mb-8">
+                            <div class="bg-blue-100 dark:bg-blue-900 p-3 rounded-full">
+                                <i data-feather="cpu" class="text-blue-500 dark:text-blue-300"></i>
+                            </div>
+                            <h3 class="text-2xl font-bold text-gray-800 dark:text-white">Technical Skills</h3>
+                        </div>
+                        
+                        <div class="space-y-6">
+                            <div>
+                                <div class="flex justify-between mb-2">
+                                    <span class="text-lg font-medium text-gray-700 dark:text-gray-300">Windows Server</span>
+                                    <span class="text-blue-500 font-medium">90%</span>
+                                </div>
+                                <div class="w-full bg-gray-200 dark:bg-gray-700 rounded-full h-3">
+                                    <div class="skill-bar bg-gradient-to-r from-blue-500 to-purple-600 h-3 rounded-full" data-width="90%"></div>
+                                </div>
+                            </div>
+                            
+                            <div>
+                                <div class="flex justify-between mb-2">
+                                    <span class="text-lg font-medium text-gray-700 dark:text-gray-300">Active Directory</span>
+                                    <span class="text-blue-500 font-medium">85%</span>
+                                </div>
+                                <div class="w-full bg-gray-200 dark:bg-gray-700 rounded-full h-3">
+                                    <div class="skill-bar bg-gradient-to-r from-blue-500 to-purple-600 h-3 rounded-full" data-width="85%"></div>
+                                </div>
+                            </div>
+                            
+                            <div>
+                                <div class="flex justify-between mb-2">
+                                    <span class="text-lg font-medium text-gray-700 dark:text-gray-300">Networking</span>
+                                    <span class="text-blue-500 font-medium">80%</span>
+                                </div>
+                                <div class="w-full bg-gray-200 dark:bg-gray-700 rounded-full h-3">
+                                    <div class="skill-bar bg-gradient-to-r from-blue-500 to-purple-600 h-3 rounded-full" data-width="80%"></div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+
+                    <!-- Marketing Skills -->
+                    <div class="bg-white dark:bg-gray-800 rounded-2xl shadow-xl p-8 hover:shadow-2xl transition-shadow duration-300">
+                        <div class="flex items-center gap-3 mb-8">
+                            <div class="bg-purple-100 dark:bg-purple-900 p-3 rounded-full">
+                                <i data-feather="bar-chart-2" class="text-purple-500 dark:text-purple-300"></i>
+                            </div>
+                            <h3 class="text-2xl font-bold text-gray-800 dark:text-white">Marketing Skills</h3>
+                        </div>
+                        
+                        <div class="space-y-6">
+                            <div>
+                                <div class="flex justify-between mb-2">
+                                    <span class="text-lg font-medium text-gray-700 dark:text-gray-300">SEO</span>
+                                    <span class="text-purple-500 font-medium">95%</span>
+                                </div>
+                                <div class="w-full bg-gray-200 dark:bg-gray-700 rounded-full h-3">
+                                    <div class="skill-bar bg-gradient-to-r from-purple-500 to-pink-600 h-3 rounded-full" data-width="95%"></div>
+                                </div>
+                            </div>
+                            
+                            <div>
+                                <div class="flex justify-between mb-2">
+                                    <span class="text-lg font-medium text-gray-700 dark:text-gray-300">Google Ads</span>
+                                    <span class="text-purple-500 font-medium">85%</span>
+                                </div>
+                                <div class="w-full bg-gray-200 dark:bg-gray-700 rounded-full h-3">
+                                    <div class="skill-bar bg-gradient-to-r from-purple-500 to-pink-600 h-3 rounded-full" data-width="85%"></div>
+                                </div>
+                            </div>
+                            
+                            <div>
+                                <div class="flex justify-between mb-2">
+                                    <span class="text-lg font-medium text-gray-700 dark:text-gray-300">Analytics</span>
+                                    <span class="text-purple-500 font-medium">80%</span>
+                                </div>
+                                <div class="w-full bg-gray-200 dark:bg-gray-700 rounded-full h-3">
+                                    <div class="skill-bar bg-gradient-to-r from-purple-500 to-pink-600 h-3 rounded-full" data-width="80%"></div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+<!-- Experience Section -->
+        <section id="timeline" class="py-20 bg-white dark:bg-gray-800" aria-labelledby="timeline-title">
+  <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+    
+    <div class="text-center mb-16">
+      <h2 id="timeline-title" class="text-3xl md:text-4xl font-bold text-gray-800 dark:text-white mb-4">Career & Education Timeline</h2>
+      <div class="w-20 h-1 bg-purple-600 mx-auto"></div>
+      <p class="mt-4 max-w-2xl mx-auto text-gray-600 dark:text-gray-300">
+        A chronological overview of my professional experience and formal training.
+      </p>
+    </div>
+
+    <div class="relative">
+      
+      <div class="absolute left-4 md:left-1/2 h-full w-0.5 bg-gray-200 dark:bg-gray-600"></div>
+
+      <div class="space-y-8">
+
+        <div class="relative flex flex-col md:flex-row items-center">
+          <div class="flex-1 md:pr-8 md:text-right order-1 md:order-none">
+            <div class="bg-gray-50 dark:bg-gray-700 p-6 rounded-xl shadow-md hover:shadow-lg transition-shadow duration-300">
+              <h3 class="text-lg font-semibold text-gray-800 dark:text-white">Senior IT Technician (Team Lead)</h3>
+              <p class="text-gray-600 dark:text-gray-300 text-sm mt-1">R. K. Computer Sales &amp; Service • Full-time</p>
+              <p class="text-gray-600 dark:text-gray-300 text-sm mt-2">Lead daily IT support for SMB/AMC clients, mentor juniors, manage LAN/Wi‑Fi, imaging, and SLAs.</p>
+              <div class="flex flex-wrap gap-2 mt-3 justify-end">
+                <span class="bg-purple-100 text-purple-600 px-3 py-1 rounded-full text-sm">Network Admin</span>
+                <span class="bg-purple-100 text-purple-600 px-3 py-1 rounded-full text-sm">Windows/M365</span>
+                <span class="bg-purple-100 text-purple-600 px-3 py-1 rounded-full text-sm">Backups</span>
+              </div>
+            </div>
+          </div>
+          <div class="absolute left-0 md:left-1/2 transform -translate-x-1/2 md:-translate-x-1/2 w-8 h-8 rounded-full bg-purple-500 dark:bg-purple-600 border-4 border-white dark:border-gray-800 flex items-center justify-center z-10 order-none">
+            <i class="fas fa-network-wired text-white text-sm"></i>
+          </div>
+          <div class="flex-1 md:pl-8 order-2 md:order-none">
+            <div class="text-gray-500 dark:text-gray-400 text-sm font-medium mt-2 md:mt-0">Oct 2024 – Aug 2025</div>
+          </div>
+        </div>
+
+        <div class="relative flex flex-col md:flex-row items-center">
+          <div class="flex-1 md:pr-8 md:text-right order-1 md:order-none">
+            <div class="text-gray-500 dark:text-gray-400 text-sm font-medium mt-2 md:mt-0">2024</div>
+          </div>
+          <div class="absolute left-0 md:left-1/2 transform -translate-x-1/2 md:-translate-x-1/2 w-8 h-8 rounded-full bg-blue-500 dark:bg-blue-600 border-4 border-white dark:border-gray-800 flex items-center justify-center z-10 order-none">
+            <i class="fas fa-shield-alt text-white w-4 h-4"></i>
+          </div>
+          <div class="flex-1 md:pl-8 order-2 md:order-none">
+            <div class="bg-gray-50 dark:bg-gray-700 p-6 rounded-xl shadow-md hover:shadow-lg transition-shadow duration-300">
+              <div class="flex items-center justify-between">
+                <h3 class="text-lg font-semibold text-gray-800 dark:text-white">Cybersecurity & Ethical Hacking — Cisco</h3>
+                <span class="text-xs bg-blue-100 dark:bg-blue-900 text-blue-700 dark:text-blue-300 px-2 py-1 rounded-full ml-2">Ongoing</span>
+              </div>
+              <p class="text-gray-600 dark:text-gray-300 text-sm mt-2">Practical labs and scenarios to build foundational security skills for entry-level roles.</p>
+              <ul class="mt-3 space-y-2 text-gray-700 dark:text-gray-300 list-disc list-inside text-sm">
+                <li>Cisco Networking Academy pathway: Intro to Cybersecurity → Cybersecurity Essentials (CCST prep).</li>
+                <li>Ethical Hacking (Skills for All) emphasis: 70+ hours of hands‑on labs with Kali Linux, Wireshark, and Metasploit.</li>
+              </ul>
+            </div>
+          </div>
+        </div>
+
+        <div class="relative flex flex-col md:flex-row items-center">
+          <div class="flex-1 md:pr-8 md:text-right order-1 md:order-none">
+            <div class="bg-gray-50 dark:bg-gray-700 p-6 rounded-xl shadow-md hover:shadow-lg transition-shadow duration-300">
+              <h3 class="text-lg font-semibold text-gray-800 dark:text-white">Senior System / Network Admin</h3>
+              <p class="text-gray-600 dark:text-gray-300 text-sm mt-1">R. K. Computer Sales &amp; Service • Hybrid</p>
+              <p class="text-gray-600 dark:text-gray-300 text-sm mt-2">Owned AD, DNS/DHCP, GPOs; hardened routers/firewalls; led DR, patching, and L3 escalations.</p>
+              <div class="flex flex-wrap gap-2 mt-3 justify-end">
+                <span class="bg-purple-100 text-purple-600 px-3 py-1 rounded-full text-sm">Windows Server 2012</span>
+                <span class="bg-purple-100 text-purple-600 px-3 py-1 rounded-full text-sm">MCSA Security</span>
+                <span class="bg-purple-100 text-purple-600 px-3 py-1 rounded-full text-sm">EDR/Patching</span>
+              </div>
+            </div>
+          </div>
+          <div class="absolute left-0 md:left-1/2 transform -translate-x-1/2 md:-translate-x-1/2 w-8 h-8 rounded-full bg-purple-500 dark:bg-purple-600 border-4 border-white dark:border-gray-800 flex items-center justify-center z-10 order-none">
+            <i class="fas fa-server text-white text-sm"></i>
+          </div>
+          <div class="flex-1 md:pl-8 order-2 md:order-none">
+            <div class="text-gray-500 dark:text-gray-400 text-sm font-medium mt-2 md:mt-0">Feb 2022 – Oct 2024</div>
+          </div>
+        </div>
+
+        <div class="relative flex flex-col md:flex-row items-center">
+          <div class="flex-1 md:pr-8 md:text-right order-1 md:order-none">
+            <div class="text-gray-500 dark:text-gray-400 text-sm font-medium mt-2 md:mt-0">Oct 2022 – Jan 2023</div>
+          </div>
+          <div class="absolute left-0 md:left-1/2 transform -translate-x-1/2 md:-translate-x-1/2 w-8 h-8 rounded-full bg-purple-500 dark:bg-purple-600 border-4 border-white dark:border-gray-800 flex items-center justify-center z-10 order-none">
+            <i class="fas fa-bullhorn text-white text-sm"></i>
+          </div>
+          <div class="flex-1 md:pl-8 order-2 md:order-none">
+            <div class="bg-gray-50 dark:bg-gray-700 p-6 rounded-xl shadow-md hover:shadow-lg transition-shadow duration-300">
+              <h3 class="text-lg font-semibold text-gray-800 dark:text-white">Digital Marketing Executive</h3>
+              <p class="text-gray-600 dark:text-gray-300 text-sm mt-1">Self‑employed • Remote</p>
+              <p class="text-gray-600 dark:text-gray-300 text-sm mt-2">Managed campaigns for lappyguardian &amp; lapocare; +20% reach, +25% followers.</p>
+              <div class="flex flex-wrap gap-2 mt-3">
+                <span class="bg-purple-100 text-purple-600 px-3 py-1 rounded-full text-sm">Google Ads</span>
+                <span class="bg-purple-100 text-purple-600 px-3 py-1 rounded-full text-sm">SMO</span>
+                <span class="bg-purple-100 text-purple-600 px-3 py-1 rounded-full text-sm">SEO</span>
+              </div>
+            </div>
+          </div>
+        </div>
+
+        <div class="relative flex flex-col md:flex-row items-center">
+          <div class="flex-1 md:pr-8 md:text-right order-1 md:order-none">
+            <div class="bg-gray-50 dark:bg-gray-700 p-6 rounded-xl shadow-md hover:shadow-lg transition-shadow duration-300">
+              <h3 class="text-lg font-semibold text-gray-800 dark:text-white">Search Engine Optimization Executive</h3>
+              <p class="text-gray-600 dark:text-gray-300 text-sm mt-1">onlinestriker • Full-time • On-site</p>
+              <p class="text-gray-600 dark:text-gray-300 text-sm mt-2">Executed SEO/backlink strategies; multi‑site campaigns across edu/media/logistics.</p>
+              <div class="flex flex-wrap gap-2 mt-3 justify-end">
+                <span class="bg-purple-100 text-purple-600 px-3 py-1 rounded-full text-sm">Backlinks</span>
+                <span class="bg-purple-100 text-purple-600 px-3 py-1 rounded-full text-sm">PPC</span>
+                <span class="bg-purple-100 text-purple-600 px-3 py-1 rounded-full text-sm">Content</span>
+              </div>
+            </div>
+          </div>
+          <div class="absolute left-0 md:left-1/2 transform -translate-x-1/2 md:-translate-x-1/2 w-8 h-8 rounded-full bg-purple-500 dark:bg-purple-600 border-4 border-white dark:border-gray-800 flex items-center justify-center z-10 order-none">
+            <i class="fas fa-search text-white text-sm"></i>
+          </div>
+          <div class="flex-1 md:pl-8 order-2 md:order-none">
+            <div class="text-gray-500 dark:text-gray-400 text-sm font-medium mt-2 md:mt-0">Aug 2022 – Oct 2022</div>
+          </div>
+        </div>
+        
+        <div class="relative flex flex-col md:flex-row items-center">
+          <div class="flex-1 md:pr-8 md:text-right order-1 md:order-none">
+            <div class="text-gray-500 dark:text-gray-400 text-sm font-medium mt-2 md:mt-0">May 2022 – Oct 2022</div>
+          </div>
+          <div class="absolute left-0 md:left-1/2 transform -translate-x-1/2 md:-translate-x-1/2 w-8 h-8 rounded-full bg-purple-500 dark:bg-purple-600 border-4 border-white dark:border-gray-800 flex items-center justify-center z-10 order-none">
+            <i class="fas fa-hashtag text-white text-sm"></i>
+          </div>
+          <div class="flex-1 md:pl-8 order-2 md:order-none">
+            <div class="bg-gray-50 dark:bg-gray-700 p-6 rounded-xl shadow-md hover:shadow-lg transition-shadow duration-300">
+              <h3 class="text-lg font-semibold text-gray-800 dark:text-white">Social Media Manager</h3>
+              <p class="text-gray-600 dark:text-gray-300 text-sm mt-1">Geekybug • Part-time • Remote</p>
+              <p class="text-gray-600 dark:text-gray-300 text-sm mt-2">+30% presence, +20% followers; ~40k total; ranked Lapo Care #1 on Google.</p>
+              <div class="flex flex-wrap gap-2 mt-3">
+                <span class="bg-purple-100 text-purple-600 px-3 py-1 rounded-full text-sm">Instagram</span>
+                <span class="bg-purple-100 text-purple-600 px-3 py-1 rounded-full text-sm">Facebook</span>
+                <span class="bg-purple-100 text-purple-600 px-3 py-1 rounded-full text-sm">Analytics</span>
+              </div>
+            </div>
+          </div>
+        </div>
+
+        <div class="relative flex flex-col md:flex-row items-center">
+          <div class="flex-1 md:pr-8 md:text-right order-1 md:order-none">
+            <div class="bg-gray-50 dark:bg-gray-700 p-6 rounded-xl shadow-md hover:shadow-lg transition-shadow duration-300">
+              <div class="flex items-center justify-between md:justify-end">
+                <h3 class="text-lg font-semibold text-gray-800 dark:text-white md:order-2">Digital Marketing Program — DIDM</h3>
+                <span class="text-xs bg-purple-100 dark:bg-purple-900 text-purple-700 dark:text-purple-300 px-2 py-1 rounded-full ml-2 md:ml-0 md:mr-2">Completed</span>
+              </div>
+              <p class="text-gray-600 dark:text-gray-300 text-sm mt-2">Intensive practitioner track with hands-on campaigns and analytics implementation.</p>
+              <ul class="mt-3 space-y-2 text-gray-700 dark:text-gray-300 list-disc list-inside text-sm">
+                <li>Core modules: SEO (on-page/technical/off-page), SMM, PPC, GA4, Tag Manager, Content, Email.</li>
+                <li>Tools exposure: Google Ads, Meta Ads Manager, Search Console, GA4, Ahrefs/SEMrush.</li>
+              </ul>
+            </div>
+          </div>
+          <div class="absolute left-0 md:left-1/2 transform -translate-x-1/2 md:-translate-x-1/2 w-8 h-8 rounded-full bg-purple-500 dark:bg-purple-600 border-4 border-white dark:border-gray-800 flex items-center justify-center z-10 order-none">
+            <i class="fas fa-chart-bar text-white w-4 h-4"></i>
+          </div>
+          <div class="flex-1 md:pl-8 order-2 md:order-none">
+            <div class="text-gray-500 dark:text-gray-400 text-sm font-medium mt-2 md:mt-0">2022</div>
+          </div>
+        </div>
+
+        <div class="relative flex flex-col md:flex-row items-center">
+          <div class="flex-1 md:pr-8 md:text-right order-1 md:order-none">
+            <div class="text-gray-500 dark:text-gray-400 text-sm font-medium mt-2 md:mt-0">Feb 2022 – Mar 2022</div>
+          </div>
+          <div class="absolute left-0 md:left-1/2 transform -translate-x-1/2 md:-translate-x-1/2 w-8 h-8 rounded-full bg-purple-500 dark:bg-purple-600 border-4 border-white dark:border-gray-800 flex items-center justify-center z-10 order-none">
+            <i class="fas fa-headset text-white text-sm"></i>
+          </div>
+          <div class="flex-1 md:pl-8 order-2 md:order-none">
+            <div class="bg-gray-50 dark:bg-gray-700 p-6 rounded-xl shadow-md hover:shadow-lg transition-shadow duration-300">
+              <h3 class="text-lg font-semibold text-gray-800 dark:text-white">IT Support Technician</h3>
+              <p class="text-gray-600 dark:text-gray-300 text-sm mt-1">Nykaa • Full-time • On-site</p>
+              <p class="text-gray-600 dark:text-gray-300 text-sm mt-2">Provided L1/L2 support; imaging, inventory, ticket SLAs; assisted MFA and VC setups.</p>
+              <div class="flex flex-wrap gap-2 mt-3">
+                <span class="bg-purple-100 text-purple-600 px-3 py-1 rounded-full text-sm">Windows/macOS</span>
+                <span class="bg-purple-100 text-purple-600 px-3 py-1 rounded-full text-sm">VPN/LAN/Wi‑Fi</span>
+                <span class="bg-purple-100 text-purple-600 px-3 py-1 rounded-full text-sm">Helpdesk</span>
+              </div>
+            </div>
+          </div>
+        </div>
+
+        <div class="relative flex flex-col md:flex-row items-center">
+          <div class="flex-1 md:pr-8 md:text-right order-1 md:order-none">
+            <div class="bg-gray-50 dark:bg-gray-700 p-6 rounded-xl shadow-md hover:shadow-lg transition-shadow duration-300">
+              <h3 class="text-lg font-semibold text-gray-800 dark:text-white">System Support / Network Tech</h3>
+              <p class="text-gray-600 dark:text-gray-300 text-sm mt-1">R. K. Computer Sales &amp; Service • Hybrid</p>
+              <p class="text-gray-600 dark:text-gray-300 text-sm mt-2">Deployed/troubleshot endpoints, servers, and network gear; documented assets and fixes.</p>
+              <div class="flex flex-wrap gap-2 mt-3 justify-end">
+                <span class="bg-purple-100 text-purple-600 px-3 py-1 rounded-full text-sm">Troubleshooting</span>
+                <span class="bg-purple-100 text-purple-600 px-3 py-1 rounded-full text-sm">Wireless</span>
+                <span class="bg-purple-100 text-purple-600 px-3 py-1 rounded-full text-sm">IP Networking</span>
+              </div>
+            </div>
+          </div>
+          <div class="absolute left-0 md:left-1/2 transform -translate-x-1/2 md:-translate-x-1/2 w-8 h-8 rounded-full bg-purple-500 dark:bg-purple-600 border-4 border-white dark:border-gray-800 flex items-center justify-center z-10 order-none">
+            <i class="fas fa-desktop text-white text-sm"></i>
+          </div>
+          <div class="flex-1 md:pl-8 order-2 md:order-none">
+            <div class="text-gray-500 dark:text-gray-400 text-sm font-medium mt-2 md:mt-0">Jan 2020 – Feb 2022</div>
+          </div>
+        </div>
+
+        <div class="relative flex flex-col md:flex-row items-center">
+          <div class="flex-1 md:pr-8 md:text-right order-1 md:order-none">
+            <div class="text-gray-500 dark:text-gray-400 text-sm font-medium mt-2 md:mt-0">Jan 2018 – Feb 2022</div>
+          </div>
+          <div class="absolute left-0 md:left-1/2 transform -translate-x-1/2 md:-translate-x-1/2 w-8 h-8 rounded-full bg-purple-500 dark:bg-purple-600 border-4 border-white dark:border-gray-800 flex items-center justify-center z-10 order-none">
+            <i class="fas fa-tools text-white text-sm"></i>
+          </div>
+          <div class="flex-1 md:pl-8 order-2 md:order-none">
+            <div class="bg-gray-50 dark:bg-gray-700 p-6 rounded-xl shadow-md hover:shadow-lg transition-shadow duration-300">
+              <h3 class="text-lg font-semibold text-gray-800 dark:text-white">Desktop Support / Field Engineer</h3>
+              <p class="text-gray-600 dark:text-gray-300 text-sm mt-1">R. K. Computer Sales &amp; Service • On-site</p>
+              <p class="text-gray-600 dark:text-gray-300 text-sm mt-2">Installed/maintained endpoints and printers; repaired hardware; handled urgent call‑outs.</p>
+              <div class="flex flex-wrap gap-2 mt-3">
+                <span class="bg-purple-100 text-purple-600 px-3 py-1 rounded-full text-sm">Hardware Repair</span>
+                <span class="bg-purple-100 text-purple-600 px-3 py-1 rounded-full text-sm">MSI</span>
+                <span class="bg-purple-100 text-purple-600 px-3 py-1 rounded-full text-sm">Windows 7/8/10</span>
+              </div>
+            </div>
+          </div>
+        </div>
+        
+        <div class="relative flex flex-col md:flex-row items-center">
+          <div class="flex-1 md:pr-8 md:text-right order-1 md:order-none">
+            <div class="bg-gray-50 dark:bg-gray-700 p-6 rounded-xl shadow-md hover:shadow-lg transition-shadow duration-300">
+              <h3 class="text-lg font-semibold text-gray-800 dark:text-white">Career Break — Health &amp; Well‑being</h3>
+              <p class="text-gray-600 dark:text-gray-300 text-sm mt-1">COVID‑19 Break • New Delhi</p>
+              <p class="text-gray-600 dark:text-gray-300 text-sm mt-2">Focused on upskilling, industry awareness, and family support during the pandemic.</p>
+              <div class="flex flex-wrap gap-2 mt-3 justify-end">
+                <span class="bg-purple-100 text-purple-600 px-3 py-1 rounded-full text-sm">Upskilling</span>
+                <span class="bg-purple-100 text-purple-600 px-3 py-1 rounded-full text-sm">Certifications</span>
+              </div>
+            </div>
+          </div>
+          <div class="absolute left-0 md:left-1/2 transform -translate-x-1/2 md:-translate-x-1/2 w-8 h-8 rounded-full bg-purple-500 dark:bg-purple-600 border-4 border-white dark:border-gray-800 flex items-center justify-center z-10 order-none">
+            <i class="fas fa-heartbeat text-white text-sm"></i>
+          </div>
+          <div class="flex-1 md:pl-8 order-2 md:order-none">
+            <div class="text-gray-500 dark:text-gray-400 text-sm font-medium mt-2 md:mt-0">Mar 2020 – Jun 2020</div>
+          </div>
+        </div>
+
+        <div class="relative flex flex-col md:flex-row items-center">
+          <div class="flex-1 md:pr-8 md:text-right order-1 md:order-none">
+            <div class="text-gray-500 dark:text-gray-400 text-sm font-medium mt-2 md:mt-0">Jan 2018 – Mar 2019</div>
+          </div>
+          <div class="absolute left-0 md:left-1/2 transform -translate-x-1/2 md:-translate-x-1/2 w-8 h-8 rounded-full bg-purple-500 dark:bg-purple-600 border-4 border-white dark:border-gray-800 flex items-center justify-center z-10 order-none">
+            <i class="fas fa-video text-white text-sm"></i>
+          </div>
+          <div class="flex-1 md:pl-8 order-2 md:order-none">
+            <div class="bg-gray-50 dark:bg-gray-700 p-6 rounded-xl shadow-md hover:shadow-lg transition-shadow duration-300">
+              <h3 class="text-lg font-semibold text-gray-800 dark:text-white">CCTV Camera Technician (Freelance)</h3>
+              <p class="text-gray-600 dark:text-gray-300 text-sm mt-1">Self‑employed • Part-time • On-site</p>
+              <p class="text-gray-600 dark:text-gray-300 text-sm mt-2">Installed/maintained IP/analog CCTV; trained users; fixed firmware/streaming issues.</p>
+              <div class="flex flex-wrap gap-2 mt-3">
+                <span class="bg-purple-100 text-purple-600 px-3 py-1 rounded-full text-sm">IP CCTV</span>
+                <span class="bg-purple-100 text-purple-600 px-3 py-1 rounded-full text-sm">Networking</span>
+                <span class="bg-purple-100 text-purple-600 px-3 py-1 rounded-full text-sm">Troubleshooting</span>
+              </div>
+            </div>
+          </div>
+        </div>
+
+        <div class="relative flex flex-col md:flex-row items-center">
+          <div class="flex-1 md:pr-8 md:text-right order-1 md:order-none">
+            <div class="bg-gray-50 dark:bg-gray-700 p-6 rounded-xl shadow-md hover:shadow-lg transition-shadow duration-300">
+              <h3 class="text-lg font-semibold text-gray-800 dark:text-white">IT Support / Helpdesk Technician</h3>
+              <p class="text-gray-600 dark:text-gray-300 text-sm mt-1">IBM • Full-time • On-site</p>
+              <p class="text-gray-600 dark:text-gray-300 text-sm mt-2">Resolved enterprise incidents via phone/email/remote; installed endpoints; followed ITIL.</p>
+              <div class="flex flex-wrap gap-2 mt-3 justify-end">
+                <span class="bg-purple-100 text-purple-600 px-3 py-1 rounded-full text-sm">Microsoft 365</span>
+                <span class="bg-purple-100 text-purple-600 px-3 py-1 rounded-full text-sm">Remote Support</span>
+                <span class="bg-purple-100 text-purple-600 px-3 py-1 rounded-full text-sm">ITIL</span>
+              </div>
+            </div>
+          </div>
+          <div class="absolute left-0 md:left-1/2 transform -translate-x-1/2 md:-translate-x-1/2 w-8 h-8 rounded-full bg-purple-500 dark:bg-purple-600 border-4 border-white dark:border-gray-800 flex items-center justify-center z-10 order-none">
+            <i class="fas fa-ticket-alt text-white text-sm"></i>
+          </div>
+            <div class="flex-1 md:pl-8 order-2 md:order-none">
+            <div class="text-gray-500 dark:text-gray-400 text-sm font-medium mt-2 md:mt-0">Nov 2017 – Jan 2018</div>
+            </div>
+        </div>
+
+        <div class="relative flex flex-col md:flex-row items-center">
+          <div class="flex-1 md:pr-8 md:text-right order-1 md:order-none">
+            <div class="text-gray-500 dark:text-gray-400 text-sm font-medium mt-2 md:mt-0">Apr 2015 – Jan 2018</div>
+          </div>
+          <div class="absolute left-0 md:left-1/2 transform -translate-x-1/2 md:-translate-x-1/2 w-8 h-8 rounded-full bg-purple-500 dark:bg-purple-600 border-4 border-white dark:border-gray-800 flex items-center justify-center z-10 order-none">
+            <i class="fas fa-laptop-code text-white text-sm"></i>
+          </div>
+          <div class="flex-1 md:pl-8 order-2 md:order-none">
+            <div class="bg-gray-50 dark:bg-gray-700 p-6 rounded-xl shadow-md hover:shadow-lg transition-shadow duration-300">
+              <h3 class="text-lg font-semibold text-gray-800 dark:text-white">IT Support Specialist</h3>
+              <p class="text-gray-600 dark:text-gray-300 text-sm mt-1">Self‑employed • Remote</p>
+              <p class="text-gray-600 dark:text-gray-300 text-sm mt-2">Software installs/config/troubleshooting; updates, backups, and security hardening.</p>
+              <div class="flex flex-wrap gap-2 mt-3">
+                <span class="bg-purple-100 text-purple-600 px-3 py-1 rounded-full text-sm">Software Install</span>
+                <span class="bg-purple-100 text-purple-600 px-3 py-1 rounded-full text-sm">Backups</span>
+                <span class="bg-purple-100 text-purple-600 px-3 py-1 rounded-full text-sm">MSI</span>
+              </div>
+            </div>
+          </div>
+        </div>
+
+        <div class="relative flex flex-col md:flex-row items-center">
+          <div class="flex-1 md:pr-8 md:text-right order-1 md:order-none">
+            <div class="bg-gray-50 dark:bg-gray-700 p-6 rounded-xl shadow-md hover:shadow-lg transition-shadow duration-300">
+              <div class="flex items-center justify-between md:justify-end">
+                <h3 class="text-lg font-semibold text-gray-800 dark:text-white md:order-2">Hardware & Networking — Jetking</h3>
+                <span class="text-xs bg-purple-100 dark:bg-purple-900 text-purple-700 dark:text-purple-300 px-2 py-1 rounded-full ml-2 md:ml-0 md:mr-2">Completed</span>
+              </div>
+              <p class="text-gray-600 dark:text-gray-300 text-sm mt-2">Infrastructure-focused track covering PC hardware, OS deployment, and LAN/WAN fundamentals.</p>
+              <ul class="mt-3 space-y-2 text-gray-700 dark:text-gray-300 list-disc list-inside text-sm">
+                <li>Topics: PC assembly/diagnostics, TCP/IP, VLANs/Subnetting, Windows setup, basic server roles.</li>
+                <li>Labs: SOHO network setup, router/AP configuration, cable crimping/testing, imaging routines.</li>
+              </ul>
+            </div>
+          </div>
+          <div class="absolute left-0 md:left-1/2 transform -translate-x-1/2 md:-translate-x-1/2 w-8 h-8 rounded-full bg-green-500 dark:bg-green-600 border-4 border-white dark:border-gray-800 flex items-center justify-center z-10 order-none">
+            <i class="fas fa-server text-white w-4 h-4"></i>
+          </div>
+          <div class="flex-1 md:pl-8 order-2 md:order-none">
+            <div class="text-gray-500 dark:text-gray-400 text-sm font-medium mt-2 md:mt-0">2015</div>
+          </div>
+        </div>
+
+      </div>
+      </div>
+    </div>
+  </section>
+<div class="bg-white dark:bg-gray-800 rounded-2xl shadow-xl p-8">
+    <h3 class="text-2xl font-bold text-gray-800 dark:text-white mb-8">Connect With Me</h3>
+    
+    <div class="relative">
+        <div class="absolute left-2 top-2 h-full w-0.5 bg-gray-200 dark:bg-gray-700" style="height: calc(100% - 2rem);"></div>
+        
+        <div class="space-y-6">
+
+            <div class="relative pl-8">
+                <div class="absolute left-0 top-1 w-4 h-4 rounded-full bg-blue-500 border-4 border-white dark:border-gray-800"></div>
+                <a href="https://www.linkedin.com/in/iamnikhilraghav" target="_blank" rel="noopener noreferrer" 
+                   class="flex items-center gap-3 group">
+                    <i class="fab fa-linkedin-in text-blue-500 text-xl w-5 text-center"></i>
+                    <span class="font-medium text-gray-700 dark:text-gray-300 group-hover:text-blue-500 transition-colors">
+                        LinkedIn
+                    </span>
+                </a>
+            </div>
+
+            <div class="relative pl-8">
+                <div class="absolute left-0 top-1 w-4 h-4 rounded-full bg-gray-800 dark:bg-gray-300 border-4 border-white dark:border-gray-800"></div>
+                <a href="https://github.com/i-nikhilraghav" target="_blank" rel="noopener noreferrer" 
+                   class="flex items-center gap-3 group">
+                    <i class="fab fa-github text-gray-800 dark:text-gray-300 text-xl w-5 text-center"></i>
+                    <span class="font-medium text-gray-700 dark:text-gray-300 group-hover:text-gray-900 dark:group-hover:text-white transition-colors">
+                        GitHub
+                    </span>
+                </a>
+            </div>
+
+            <div class="relative pl-8">
+                <div class="absolute left-0 top-1 w-4 h-4 rounded-full bg-gray-800 dark:bg-gray-300 border-4 border-white dark:border-gray-800"></div>
+                <a href="https://x.com/I_nikhilraghav" target="_blank" rel="noopener noreferrer" 
+                   class="flex items-center gap-3 group">
+                    <i class="fab fa-twitter text-gray-800 dark:text-gray-300 text-xl w-5 text-center"></i>
+                    <span class="font-medium text-gray-700 dark:text-gray-300 group-hover:text-gray-900 dark:group-hover:text-white transition-colors">
+                        Twitter (X)
+                    </span>
+                </a>
+            </div>
+            
+            <div class="relative pl-8">
+                <div class="absolute left-0 top-1 w-4 h-4 rounded-full bg-pink-500 border-4 border-white dark:border-gray-800"></div>
+                <a href="https://www.instagram.com/i_nikhilraghav" target="_blank" rel="noopener noreferrer" 
+                   class="flex items-center gap-3 group">
+                    <i class="fab fa-instagram text-pink-500 text-xl w-5 text-center"></i>
+                    <span class="font-medium text-gray-700 dark:text-gray-300 group-hover:text-pink-500 transition-colors">
+                        Instagram
+                    </span>
+                </a>
+            </div>
+            
+            <div class="relative pl-8">
+                <div class="absolute left-0 top-1 w-4 h-4 rounded-full bg-indigo-500 border-4 border-white dark:border-gray-800"></div>
+                <a href="https://discord.com/channels/@me/1025668759882571879" target="_blank" rel="noopener noreferrer" 
+                   class="flex items-center gap-3 group">
+                    <i class="fab fa-discord text-indigo-500 text-xl w-5 text-center"></i>
+                    <span class="font-medium text-gray-700 dark:text-gray-300 group-hover:text-indigo-500 transition-colors">
+                        Discord
+                    </span>
+                </a>
+            </div>
+
+            <div class="relative pl-8">
+                <div class="absolute left-0 top-1 w-4 h-4 rounded-full bg-blue-600 border-4 border-white dark:border-gray-800"></div>
+                <a href="https://www.facebook.com/i.nikhilraghav" target="_blank" rel="noopener noreferrer" 
+                   class="flex items-center gap-3 group">
+                    <i class="fab fa-facebook-f text-blue-600 text-xl w-5 text-center"></i>
+                    <span class="font-medium text-gray-700 dark:text-gray-300 group-hover:text-blue-600 transition-colors">
+                        Facebook
+                    </span>
+                </a>
+            </div>
+
+        </div>
+    </div>
+</div>
+</main>
+<custom-footer></custom-footer>
+    
+    <script src="script.js"></script>
+    <script>feather.replace();</script>
+<script src="https://huggingface.co/deepsite/deepsite-badge.js"></script>
+</body>
+</html>
