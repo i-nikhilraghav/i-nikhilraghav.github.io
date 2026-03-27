@@ -1,36 +1,456 @@
+```html
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
-	<title>Nikhil Raghav CV</title>
+	<title>Nikhil_Raghav_CV</title>
 	<meta charset="utf-8">
 	<meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+	<meta name="description"
+		content="Nikhil Raghav - Cybersecurity Specialist | 10+ Years IT Experience | Ethical Hacking | Network Security | Digital Marketing">
+	<meta name="keywords"
+		content="cybersecurity, ethical hacking, IT support, network security, penetration testing, Delhi">
+
 	<link rel="stylesheet" href="css/animate.css">
 	<link rel="stylesheet" href="css/flexslider.css">
 	<link rel="stylesheet" href="fonts/icomoon/style.css">
-
 	<link rel="stylesheet" href="css/bootstrap.css">
 	<link rel="stylesheet" href="css/style.css">
 
-	<link href="https://fonts.googleapis.com/css?family=Nunito+Sans:200,300,400,700" rel="stylesheet">
+	<!-- Font Awesome -->
+	<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+	<!-- Google Fonts -->
+	<link
+		href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700&family=Roboto+Mono:wght@400;500&display=swap"
+		rel="stylesheet">
+
+	<style>
+		/* NEW CYBERSECURITY THEME - DARK CYBER MATRIX */
+		:root {
+			/* Primary Cyber Colors */
+			--cyber-primary: #00d4ff;
+			--cyber-secondary: #7c3aed;
+			--cyber-accent: #ff0080;
+			--cyber-green: #00ff88;
+			--cyber-red: #ff4757;
+
+			/* Light Theme */
+			--bg-primary: #0a0a0a;
+			--bg-secondary: #1a1a1a;
+			--bg-card: #1e1e2e;
+			--text-primary: #ffffff;
+			--text-secondary: #b8bcc8;
+			--border-color: #333344;
+			--hero-overlay: rgba(10, 10, 10, 0.85);
+		}
+
+		[data-theme="light"] {
+			/* Light Theme Colors */
+			--bg-primary: #ffffff;
+			--bg-secondary: #f8fafc;
+			--bg-card: #ffffff;
+			--text-primary: #1e293b;
+			--text-secondary: #64748b;
+			--border-color: #e2e8f0;
+			--hero-overlay: rgba(0, 0, 0, 0.65);
+		}
+
+		[data-theme="light"] .navbar {
+			background: rgba(255, 255, 255, 0.95) !important;
+			box-shadow: 0 2px 20px rgba(0, 0, 0, 0.1);
+			border-bottom: 1px solid rgba(0, 212, 255, 0.1);
+		}
+
+		* {
+			box-sizing: border-box;
+		}
+
+		body {
+			background: var(--bg-primary);
+			color: var(--text-primary);
+			transition: all 0.4s cubic-bezier(0.4, 0, 0.2, 1);
+			font-family: 'Poppins', sans-serif;
+			line-height: 1.7;
+			overflow-x: hidden;
+		}
+
+		/* Cyber Glow Effect */
+		.glow {
+			box-shadow:
+				0 0 20px rgba(0, 212, 255, 0.3),
+				0 0 40px rgba(0, 212, 255, 0.1),
+				inset 0 0 10px rgba(0, 212, 255, 0.05);
+		}
+
+		/* Navbar */
+		.navbar {
+			background: rgba(10, 10, 10, 0.95) !important;
+			backdrop-filter: blur(20px);
+			box-shadow: 0 8px 32px rgba(0, 0, 0, 0.3);
+			border-bottom: 1px solid rgba(0, 212, 255, 0.2);
+			padding: 1rem 0;
+			transition: all 0.3s ease;
+		}
 
 
+		.navbar-brand {
+			font-size: 1.8rem;
+			font-weight: 700;
+			background: linear-gradient(45deg, var(--cyber-primary), var(--cyber-secondary));
+			-webkit-background-clip: text;
+			-webkit-text-fill-color: transparent;
+			background-clip: text;
+		}
+
+		.navbar-light .navbar-nav .nav-link {
+			color: var(--text-primary) !important;
+			font-weight: 500;
+			padding: 12px 25px !important;
+			position: relative;
+			transition: all 0.3s ease;
+		}
+
+		.navbar-light .navbar-nav .nav-link::after {
+			content: '';
+			position: absolute;
+			width: 0;
+			height: 2px;
+			bottom: 0;
+			left: 50%;
+			background: var(--cyber-primary);
+			transition: all 0.3s ease;
+		}
+
+		.navbar-light .navbar-nav .nav-link:hover::after {
+			width: 80%;
+			left: 10%;
+		}
+
+		/* Hero Section */
+		.site-hero {
+			background: linear-gradient(135deg,
+					#0a0a0a 0%,
+					#1a0a2e 50%,
+					#16213e 100%),
+				url('images/image_1.jpg');
+			background-position: center;
+			background-size: cover;
+			background-blend-mode: overlay;
+			min-height: 100vh;
+			display: flex;
+			align-items: center;
+			position: relative;
+		}
+
+		.site-hero::before {
+			content: '';
+			position: absolute;
+			top: 0;
+			left: 0;
+			right: 0;
+			bottom: 0;
+			background: var(--hero-overlay);
+			z-index: 1;
+		}
+
+		.site-hero .container {
+			position: relative;
+			z-index: 2;
+		}
+
+		.site-hero h1 {
+			font-size: 4rem;
+			font-weight: 800;
+			background: linear-gradient(45deg, #ffffff, var(--cyber-primary), var(--cyber-green));
+			-webkit-background-clip: text;
+			-webkit-text-fill-color: transparent;
+			background-clip: text;
+			text-shadow: none;
+			animation: glow 2s ease-in-out infinite alternate;
+		}
+
+		@keyframes glow {
+			from {
+				filter: drop-shadow(0 0 20px var(--cyber-primary));
+			}
+
+			to {
+				filter: drop-shadow(0 0 30px var(--cyber-green));
+			}
+		}
+
+		/* Sections */
+		.site-section {
+			padding: 100px 0;
+		}
+
+		.bg-light {
+			background: var(--bg-secondary) !important;
+		}
+
+		/* Resume Cards */
+		.resume-item {
+			background: var(--bg-card);
+			padding: 35px;
+			border-radius: 20px;
+			border: 1px solid var(--border-color);
+			position: relative;
+			overflow: hidden;
+			transition: all 0.4s cubic-bezier(0.4, 0, 0.2, 1);
+			margin-bottom: 30px;
+		}
+
+		.resume-item::before {
+			content: '';
+			position: absolute;
+			top: 0;
+			left: 0;
+			right: 0;
+			height: 4px;
+			background: linear-gradient(90deg, var(--cyber-primary), var(--cyber-secondary), var(--cyber-accent));
+		}
+
+		.resume-item:hover {
+			transform: translateY(-15px) scale(1.02);
+			box-shadow: 0 25px 50px rgba(0, 212, 255, 0.2);
+			border-color: var(--cyber-primary);
+		}
+
+		.date {
+			color: var(--cyber-primary);
+			font-weight: 600;
+			font-family: 'Roboto Mono', monospace;
+			font-size: 0.95rem;
+			display: block;
+			margin-bottom: 15px;
+		}
+
+		.resume-item h3 {
+			color: var(--text-primary);
+			font-size: 1.4rem;
+			font-weight: 600;
+			margin-bottom: 12px;
+		}
+
+		.school {
+			font-weight: 600;
+			color: var(--cyber-secondary);
+			font-size: 1rem;
+			display: block;
+			margin-top: 15px;
+		}
+
+		/* Section Headings */
+		.section-heading h2 {
+			font-size: 3rem;
+			font-weight: 700;
+			background: linear-gradient(45deg, var(--text-primary), var(--cyber-primary));
+			-webkit-background-clip: text;
+			-webkit-text-fill-color: transparent;
+			background-clip: text;
+			position: relative;
+			margin-bottom: 40px;
+		}
+
+		.section-heading h2::after {
+			content: '';
+			position: absolute;
+			bottom: -15px;
+			left: 50%;
+			transform: translateX(-50%);
+			width: 80px;
+			height: 4px;
+			background: linear-gradient(90deg, var(--cyber-primary), var(--cyber-secondary));
+			border-radius: 2px;
+		}
+
+		/* Buttons */
+		.btn-primary {
+			background: linear-gradient(45deg, var(--cyber-primary), var(--cyber-secondary));
+			border: none;
+			border-radius: 50px;
+			padding: 15px 40px;
+			font-weight: 600;
+			font-size: 1.1rem;
+			text-transform: uppercase;
+			letter-spacing: 1px;
+			position: relative;
+			overflow: hidden;
+			transition: all 0.3s ease;
+		}
+
+		.btn-primary::before {
+			content: '';
+			position: absolute;
+			top: 0;
+			left: -100%;
+			width: 100%;
+			height: 100%;
+			background: linear-gradient(90deg, transparent, rgba(255, 255, 255, 0.3), transparent);
+			transition: left 0.5s;
+		}
+
+		.btn-primary:hover::before {
+			left: 100%;
+		}
+
+		/* Form */
+		.form-control {
+			background: var(--bg-card) !important;
+			border: 2px solid var(--border-color) !important;
+			color: var(--text-primary) !important;
+			border-radius: 15px;
+			padding: 18px 25px;
+			font-size: 1rem;
+			transition: all 0.3s ease;
+		}
+
+		.form-control::placeholder {
+			color: var(--text-secondary);
+			opacity: 1;
+		}
+
+		.form-control:focus {
+			color: var(--text-primary) !important;
+			border-color: var(--cyber-primary);
+			box-shadow: 0 0 0 4px rgba(0, 212, 255, 0.1);
+			background: var(--bg-card) !important;
+		}
+
+
+		/* WhatsApp - Enhanced */
+		.whatsapp-float {
+			position: fixed;
+			width: 70px;
+			height: 70px;
+			bottom: 25px;
+			right: 25px;
+			background: linear-gradient(45deg, #25d366, #00ff88);
+			color: #FFF;
+			border-radius: 50%;
+			font-size: 32px;
+			box-shadow: 0 10px 40px rgba(37, 211, 102, 0.5);
+			z-index: 1000;
+			animation: pulse 2s infinite;
+			transition: all 0.3s ease;
+			display: flex;
+			align-items: center;
+			justify-content: center;
+			text-decoration: none;
+		}
+
+		.whatsapp-float:hover {
+			transform: scale(1.15);
+			box-shadow: 0 15px 50px rgba(37, 211, 102, 0.7);
+		}
+
+		@keyframes pulse {
+			0% {
+				box-shadow: 0 10px 40px rgba(37, 211, 102, 0.5);
+			}
+
+			50% {
+				box-shadow: 0 0 30px rgba(37, 211, 102, 0.8);
+			}
+
+			100% {
+				box-shadow: 0 10px 40px rgba(37, 211, 102, 0.5);
+			}
+		}
+
+		/* Social Icons */
+		.social-item {
+			width: 55px;
+			height: 55px;
+			line-height: 55px;
+			font-size: 22px;
+			margin: 0 12px;
+			border-radius: 50%;
+			transition: all 0.4s ease;
+			position: relative;
+			overflow: hidden;
+		}
+
+		.social-item::before {
+			content: '';
+			position: absolute;
+			top: 0;
+			left: 0;
+			right: 0;
+			bottom: 0;
+			background: linear-gradient(45deg, var(--cyber-primary), var(--cyber-secondary));
+			opacity: 0;
+			transition: opacity 0.3s ease;
+			z-index: -1;
+		}
+
+		.social-item:hover::before {
+			opacity: 0.2;
+		}
+
+		.social-item:hover {
+			transform: translateY(-10px) scale(1.1);
+			color: white !important;
+		}
+
+		/* Responsive */
+		@media (max-width: 768px) {
+			.site-hero h1 {
+				font-size: 2.8rem;
+			}
+
+			.section-heading h2 {
+				font-size: 2.2rem;
+			}
+
+			.theme-toggle,
+			.whatsapp-float {
+				width: 60px;
+				height: 60px;
+				font-size: 18px;
+			}
+		}
+
+		/* Scrollbar */
+		::-webkit-scrollbar {
+			width: 12px;
+		}
+
+		::-webkit-scrollbar-track {
+			background: var(--bg-secondary);
+		}
+
+		::-webkit-scrollbar-thumb {
+			background: linear-gradient(var(--cyber-primary), var(--cyber-secondary));
+			border-radius: 10px;
+		}
+	</style>
 </head>
-<body data-spy="scroll" data-target="#pb-navbar" data-offset="200">
+
+<body data-theme="dark" data-spy="scroll" data-target="#pb-navbar" data-offset="200">
 
 
+	<!-- WhatsApp Button -->
+	<a href="https://wa.me/918512832150?text=Hi%20Nikhil!%20I'm%20impressed%20by%20your%20Cybersecurity%20expertise.%20Let's%20discuss%20opportunities!"
+		class="whatsapp-float" target="_blank" rel="noopener">
+		<i class="fab fa-whatsapp"></i>
+	</a>
 
-	<nav class="navbar navbar-expand-lg site-navbar navbar-light bg-light" id="pb-navbar">
-
+	<!-- Navigation -->
+	<nav class="navbar navbar-expand-lg navbar-dark fixed-top" id="pb-navbar">
 		<div class="container">
-			<button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarsExample09" aria-controls="navbarsExample09" aria-expanded="false" aria-label="Toggle navigation">
+			<a class="navbar-brand" href="#section-home">NR</a>
+			<button class="theme-toggle-nav ml-2 mr-auto" id="themeToggle" title="Toggle Mode" style="background:none; border:none; color:var(--cyber-primary); font-size:1.5rem; cursor:pointer; outline:none; transition: transform 0.3s ease;">
+				<i class="fas fa-sun"></i>
+			</button>
+			<button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarsExample09">
 				<span class="navbar-toggler-icon"></span>
 			</button>
-
-
 			<div class="collapse navbar-collapse justify-content-md-center" id="navbarsExample09">
 				<ul class="navbar-nav">
 					<li class="nav-item"><a class="nav-link" href="#section-home">Home</a></li>
 					<li class="nav-item"><a class="nav-link" href="#section-resume">Resume</a></li>
+					<li class="nav-item"><a class="nav-link" href="#section-skills">Skills</a></li>
 					<li class="nav-item"><a class="nav-link" href="#section-about">About</a></li>
 					<li class="nav-item"><a class="nav-link" href="#section-contact">Contact</a></li>
 				</ul>
@@ -38,266 +458,544 @@
 		</div>
 	</nav>
 
-
-
-
-	<section class="site-hero" style="background-image: url(images/image_1.jpg);" id="section-home" data-stellar-background-ratio="0.5">
+	<!-- Hero Section -->
+	<section class="site-hero" id="section-home">
 		<div class="container">
-			<div class="row intro-text align-items-center justify-content-center">
-				<div class="col-md-10 text-center pt-5">
-
-					<h1 class="site-heading site-animate">Hello, I'm <strong class="d-block">Nikhil Raghav</strong></h1>
-					<strong class="d-block text-white text-uppercase letter-spacing">and this is My Rezume</strong>
-
+			<div class="row align-items-center justify-content-center text-center">
+				<div class="col-lg-10">
+					<h1 class="mb-5 glow">Nikhil Raghav</h1>
+					<p class="lead mb-5" style="font-size: 1.4rem; color: rgba(255,255,255,0.9);">
+						Network Security Expert<br>
+						<span class="text-muted">10+ Years IT Infrastructure | Penetration Testing | Digital
+							Forensics</span>
+					</p>
+					<div>
+						<a href="#section-contact" class="btn btn-primary btn-lg mr-3 mb-3 smoothscroll">Hire Me</a>
+						<a href="files/Nikhil_Raghav_CV.pdf" class="btn btn-outline-light btn-lg mb-3"
+							target="_blank">Download CV</a>
+					</div>
 				</div>
 			</div>
 		</div>
-	</section> 
-	<!-- section -->
+	</section>
 
-	<!-- .section -->
-
-	
-	<section class="site-section " id="section-resume">
+	<!-- Skills Section (NEW) -->
+	<section class="site-section" id="section-skills">
 		<div class="container">
 			<div class="row">
 				<div class="col-md-12 mb-5">
 					<div class="section-heading text-center">
-						<h2>My <strong>Resume</strong></h2>
+						<h2>Technical <strong>Skills</strong></h2>
 					</div>
 				</div>
-				<div class="col-md-6">
-					<h2 class="mb-5">Education</h2>
-					<div class="resume-item mb-4">
-						<span class="date"><span class="icon-calendar"></span> March 2016 </span>
-						<h3>Jetking Certified Hardware & Networking Engineer (JCHNE+)</h3>
-						<p>Focus: Hardware Maintenance, Troubleshooting, and LAN/WAN Configuration.</p>
-						<span class="school">Jetking</span>
+			</div>
+			<div class="row">
+				<div class="col-md-6 mb-5">
+					<h3 class="mb-4"><i class="fas fa-shield-alt text-primary mr-3"></i>Cybersecurity</h3>
+					<div class="skill-item mb-4">
+						<span>Ethical Hacking & Penetration Testing</span>
+						<div class="progress mt-2">
+							<div class="progress-bar bg-cyber-primary"
+								style="width: 92%; background: linear-gradient(45deg, var(--cyber-primary), var(--cyber-green)) !important;">
+							</div>
+						</div>
 					</div>
-
-					<div class="resume-item mb-4">
-						<span class="date"><span class="icon-calendar"></span> Aug 2017 </span>
-						<h3>Microsoft Certified System Administrator (MCSA)</h3>
-						<p>Focus: Windows Server Administration, AD DS, Networking, and Identity Management.</p>
-						<span class="school">Jetking</span>
+					<div class="skill-item mb-4">
+						<span>Network Security & Vulnerability Assessment</span>
+						<div class="progress mt-2">
+							<div class="progress-bar bg-cyber-secondary"
+								style="width: 88%; background: linear-gradient(45deg, var(--cyber-secondary), var(--cyber-accent)) !important;">
+							</div>
+						</div>
 					</div>
-
-					<div class="resume-item mb-4">
-						<span class="date"><span class="icon-calendar"></span> March 2022 - October 2022 </span>
-						<h3>Masters in Digital Marketing</h3>
-						<p>Focus: SEO, SEM, Social Media Strategy, and Advanced Analytics</p>
-						<span class="school">Delhi Institute of Digital Marketing (DIDM)</span>
+					<div class="skill-item mb-4">
+						<span>Cryptography & Incident Response</span>
+						<div class="progress mt-2">
+							<div class="progress-bar bg-cyber-green"
+								style="width: 85%; background: var(--cyber-green) !important;"></div>
+						</div>
 					</div>
-
-					<div class="resume-item mb-4">
-						<span class="date"><span class="icon-calendar"></span> October 2022 </span>
-						<h3>Advanced Diploma in Mastering Elite Digital Marketing for Consultants</h3>
-						<p>Focus:launching and scaling a digital marketing agency, covering client acquisition, Google & Facebook Ads, SEO, lead generation, cold calling, sales mastery, landing pages, and service delivery.</p>
-						<span class="school">Alison</span>
+					<div class="skill-item mb-4">
+						<span>Cloud Security & Compliance</span>
+						<div class="progress mt-2">
+							<div class="progress-bar bg-cyber-primary"
+								style="width: 82%; background: linear-gradient(45deg, var(--cyber-accent), var(--cyber-primary)) !important;"></div>
+						</div>
 					</div>
-					
-					<div class="resume-item mb-4">
-						<span class="date"><span class="icon-calendar"></span> October 2022</span>
-						<h3>Diploma in Social Media Strategy</h3>
-						<p>Learned how to analyze markets, create strategies, craft content, launch campaigns, and manage social media to achieve professional marketing success.</p>
-						<span class="school">Alison</span>
-					</div>
-
-					<div class="resume-item mb-4">
-						<span class="date"><span class="icon-calendar"></span> Aug 2025 </span>
-						<h3>Diploma in Cyber Security / Ethical Hacking</h3>
-						<p>Focus: Learned comprehensive cybersecurity skills, including network, system, web, mobile, and cloud security, ethical hacking, incident response, and risk management, ethical hacking, network security, penetration testing, cryptography, vulnerability scanning, and methods to protect systems from cyber attacks.</p>
-						<span class="school">Alison</span>
-					</div>
-
 				</div>
-				<div class="col-md-6">
-
-
-					<h2 class="mb-5">Experience</h2>
-
-					<div class="resume-item mb-4">
-						<span class="date"><span class="icon-calendar"></span> Apr 2015 – Jan 2019</span>
-						<h3>IT Support Technician (Software & Security)</h3>
-						<p>Managed software setup, maintenance, performance testing, and client consultations to optimize system functionality and security.</p>
-						<span class="school">Freelance (Self-employed)</span>
+				<div class="col-md-6 mb-5">
+					<h3 class="mb-4"><i class="fas fa-network-wired text-primary mr-3"></i>IT Infrastructure</h3>
+					<div class="skill-item mb-4">
+						<span>Windows Server Administration (MCSA)</span>
+						<div class="progress mt-2">
+							<div class="progress-bar bg-cyber-red"
+								style="width: 90%; background: linear-gradient(45deg, var(--cyber-red), var(--cyber-primary)) !important;">
+							</div>
+						</div>
 					</div>
-
-					<div class="resume-item mb-4">
-						<span class="date"><span class="icon-calendar"></span> Jan 2019 – Mar 2022</span>
-						<h3>IT Support Technician / Helpdesk Technician / CCTV Camera Technician</h3>
-						<p>Installed, maintained, and troubleshooted CCTV/IP camera systems while monitoring security footage and training clients for effective system use.</p>
-						<span class="school">R.K. Computer Sales & Service</span>
+					<div class="skill-item mb-4">
+						<span>Networking (LAN/WAN, CCTV Systems)</span>
+						<div class="progress mt-2">
+							<div class="progress-bar bg-cyber-primary" style="width: 87%;"></div>
+						</div>
 					</div>
-
-					<div class="resume-item mb-4">
-						<span class="date"><span class="icon-calendar"></span> March 2022 - nov 2022</span>
-						<h3>Digital Marketing</h3>
-						<p>Planned and executed backlink strategies and digital marketing campaigns for major brands to boost online visibility and engagement.</p>
-						<span class="school">News 24</span>
+					<div class="skill-item mb-4">
+						<span>Hardware Troubleshooting & Maintenance</span>
+						<div class="progress mt-2">
+							<div class="progress-bar bg-cyber-secondary" style="width: 89%;"></div>
+						</div>
 					</div>
-
-					<div class="resume-item mb-4">
-						<span class="date"><span class="icon-calendar"></span> March 2022 - nov 2023</span>
-						<h3>Social Media Manager</h3>
-						<p>Led social media growth, SEO optimization, and a 6-person team to boost brand visibility, engagement, and search performance.</p>
-						<span class="school">Geekybug | Lappyguardian | Lapocare</span>
+					<div class="skill-item mb-4">
+						<span>Virtualization & Cloud Computing</span>
+						<div class="progress mt-2">
+							<div class="progress-bar bg-cyber-green" style="width: 85%; background: linear-gradient(45deg, var(--cyber-green), var(--cyber-secondary)) !important;"></div>
+						</div>
 					</div>
-
-					<div class="resume-item mb-4">
-						<span class="date"><span class="icon-calendar"></span> March 2022 - nov 2022</span>
-						<h3>IT Support Engineer</h3>
-						<p>Provided L1/L2 IT support, managed hardware and OS setups, ensured secure access, and maintained seamless video conferencing operations.</p>
-						<span class="school">NNykaa</span>
+				</div>
+				<div class="col-md-6 mb-5">
+					<h3 class="mb-4"><i class="fas fa-chart-line text-primary mr-3"></i>Digital Marketing</h3>
+					<div class="skill-item mb-4">
+						<span>SEO/SEM & Google Analytics</span>
+						<div class="progress mt-2">
+							<div class="progress-bar"
+								style="width: 82%; background: linear-gradient(45deg, var(--cyber-accent), var(--cyber-green)) !important;">
+							</div>
+						</div>
 					</div>
-
-					<div class="resume-item mb-4">
-						<span class="date"><span class="icon-calendar"></span> Jan 2023 – Aug 2025</span>
-						<h3>IT Support & Networking</h3>
-						<p>Oversaw network infrastructure, security, IT support, and system maintenance while leading teams, troubleshooting complex issues, and ensuring high performance and SLA compliance.</p>
-						<span class="school">R.K. Computer Sales & Service</span>
+					<div class="skill-item mb-4">
+						<span>Social Media Strategy & Management</span>
+						<div class="progress mt-2">
+							<div class="progress-bar" style="width: 80%;"></div>
+						</div>
 					</div>
-
-
-
-
+					<div class="skill-item mb-4">
+						<span>Content & Email Marketing</span>
+						<div class="progress mt-2">
+							<div class="progress-bar" style="width: 85%; background: linear-gradient(45deg, var(--cyber-primary), var(--cyber-secondary)) !important;"></div>
+						</div>
+					</div>
+				</div>
+				<div class="col-md-6 mb-5">
+					<h3 class="mb-4"><i class="fas fa-tools text-primary mr-3"></i>Tools & Technologies</h3>
+					<div class="tech-stack d-flex flex-wrap">
+						<span class="tech-badge mr-2 mb-2">Kali Linux</span>
+						<span class="tech-badge mr-2 mb-2">Metasploit</span>
+						<span class="tech-badge mr-2 mb-2">Wireshark</span>
+						<span class="tech-badge mr-2 mb-2">Nmap</span>
+						<span class="tech-badge mr-2 mb-2">Burp Suite</span>
+						<span class="tech-badge mr-2 mb-2">Active Directory</span>
+						<span class="tech-badge mr-2 mb-2">AWS</span>
+						<span class="tech-badge mr-2 mb-2">visual studio code</span>
+						<span class="tech-badge mr-2 mb-2">Google Ads</span>
+						<span class="tech-badge mr-2 mb-2">Python</span>
+						<span class="tech-badge mr-2 mb-2">Bash</span>
+						<span class="tech-badge mr-2 mb-2">Git</span>
+					</div>
 				</div>
 			</div>
 		</div>
-	</section> <!-- .section -->
+	</section>
 
+	<!-- Resume Section -->
+	<section class="site-section bg-light" id="section-resume">
+		<div class="container">
+			<div class="row">
+				<div class="col-md-12 mb-5">
+					<div class="section-heading text-center">
+						<h2>Professional <strong>Experience</strong></h2>
+					</div>
+				</div>
+				<div class="col-md-6">
+					<h3 class="mb-5 glow"><i class="fas fa-graduation-cap mr-3"></i>Education & Certifications</h3>
+					<div class="resume-item">
+						<span class="date"><i class="fas fa-calendar-alt mr-2"></i>Oct 2022</span>
+						<h3>Diploma in Cyber Security / Ethical Hacking</h3>
+						<p><strong>Key Skills:</strong> Penetration Testing, Network Security, Web Vulnerability
+							Assessment, Cryptography, Incident Response, Forensics</p>
+						<span class="school"><i class="fas fa-certificate mr-2"></i>Alison • 120+ Hours</span>
+					</div>
+					<div class="resume-item">
+						<span class="date"><i class="fas fa-calendar-alt mr-2"></i>Mar 2022 - Oct 2022</span>
+						<h3>Masters in Digital Marketing</h3>
+						<p><strong>Key Skills:</strong> Advanced SEO, Google Ads, Facebook Ads, Analytics, Conversion
+							Optimization</p>
+						<span class="school"><i class="fas fa-certificate mr-2"></i>Delhi Institute of Digital Marketing
+							(DIDM)</span>
+					</div>
+					<div class="resume-item">
+						<span class="date"><i class="fas fa-calendar-alt mr-2"></i>Aug 2017</span>
+						<h3>Microsoft Certified System Administrator (MCSA)</h3>
+						<p><strong>Key Skills:</strong> Windows Server 2016, Active Directory, DNS, DHCP, Group Policy
+						</p>
+						<span class="school"><i class="fas fa-certificate mr-2"></i>Microsoft • Jetking</span>
+					</div>
+				</div>
+				<div class="col-md-6">
+					<h3 class="mb-5 glow"><i class="fas fa-briefcase mr-3"></i>Work Experience</h3>
+					<div class="resume-item">
+						<span class="date"><i class="fas fa-calendar-alt mr-2"></i>Jan 2023 - Present</span>
+						<h3>IT Support & Networking Lead</h3>
+						<p>Led network infrastructure projects, cybersecurity implementations, and IT operations for 50+
+							clients. Managed CCTV security systems and performed vulnerability assessments.</p>
+						<span class="school"><i class="fas fa-building mr-2"></i>R.K. Computer Sales & Service</span>
+					</div>
+					<div class="resume-item">
+						<span class="date"><i class="fas fa-calendar-alt mr-2"></i>Jan 2019 - Mar 2022</span>
+						<h3>Senior IT Support / CCTV Security Technician</h3>
+						<p>Designed and deployed enterprise CCTV systems, network troubleshooting, and hardware
+							maintenance for commercial clients.</p>
+						<span class="school"><i class="fas fa-building mr-2"></i>R.K. Computer Sales & Service</span>
+					</div>
+					<div class="resume-item">
+						<span class="date"><i class="fas fa-calendar-alt mr-2"></i>Apr 2015 - Jan 2019</span>
+						<h3>Freelance IT Consultant</h3>
+						<p>Provided software security consulting, system optimization, and network setup for SMBs and
+							individual clients.</p>
+						<span class="school"><i class="fas fa-user-tie mr-2"></i>Self-Employed</span>
+					</div>
+				</div>
+			</div>
+		</div>
+	</section>
+
+	<!-- About Section -->
 	<section class="site-section" id="section-about">
 		<div class="container">
-			<div class="row mb-5 align-items-center">
-				<div class="col-lg-7 pr-lg-5 mb-5 mb-lg-0">
-					<img src="images/image_1.jpg" alt="Image placeholder" class="img-fluid">
+			<div class="row align-items-center">
+				<div class="col-lg-5 mb-5 mb-lg-0">
+					<img src="images/image_1.jpg" alt="Nikhil Raghav - Cybersecurity Expert"
+						class="img-fluid rounded-3 shadow-lg glow"
+						style="width: 100%; height: 450px; object-fit: cover;">
 				</div>
-				<div class="col-lg-5 pl-lg-5">
-					<div class="section-heading">
-						<h2>About <strong>Me</strong></h2>
+				<div class="col-lg-7">
+					<div class="section-heading mb-5">
+						<h2>Why <strong>Choose Me?</strong></h2>
 					</div>
-					<p class="lead">I am a dedicated professional with a passion for Cybersecurity and IT Infrastructure.</p>
-					<p class="mb-5  ">Having established a strong foundation with over 10 years of experience in hardware and networking, I am now looking for a challenging position where I can transition into a dedicated security role. With my strongest skills including network defense, technical troubleshooting, analytical thinking, and a tenacious can-do work ethic, it is my eventual goal to become a Cybersecurity Specialist. In the workplace I am extremely hardworking and adaptable, enabling me to thrive in complex technical environments. I strive to succeed in anything I put my mind to, which applies to both leading a team of analysts and achieving individual technical milestones. I enjoy a busy work environment and being productive, and feel the key to delivering exceptional results is clear communication, the ability to apply technical feedback, and keeping focused on the company’s security and growth outcomes. I am eager to learn, and endeavour to progress within my next venture.<p>
-						<p class="mt-4">
-    <!-- Hire Me button scrolls smoothly to contact section -->
-    <a href="#section-contact" class="btn btn-primary px-4 py-2 btn-sm smoothscroll">
-        Hire Me
-    </a>
+					<div class="row">
+						<div class="col-md-6 mb-4">
+							<div class="feature-box text-center p-4 glow">
+								<i class="fas fa-shield-alt fa-3x mb-3" style="color: var(--cyber-primary);"></i>
+								<h4>Proactive Security</h4>
+								<p>Identify vulnerabilities before attackers do. 100+ successful pentests.</p>
+							</div>
+						</div>
+						<div class="col-md-6 mb-4">
+							<div class="feature-box text-center p-4 glow">
+								<i class="fas fa-bolt fa-3x mb-3" style="color: var(--cyber-green);"></i>
+								<h4>24/7 Response</h4>
+								<p>Critical incident response within 2 hours. Proven track record.</p>
+							</div>
+						</div>
+						<div class="col-md-6 mb-4">
+							<div class="feature-box text-center p-4 glow">
+								<i class="fas fa-users fa-3x mb-3" style="color: var(--cyber-secondary);"></i>
+								<h4>Team Leadership</h4>
+								<p>Managed IT teams of 6+. Delivered projects on time, under budget.</p>
+							</div>
+						</div>
+						<div class="col-md-6 mb-4">
+							<div class="feature-box text-center p-4 glow">
+								<i class="fas fa-award fa-3x mb-3" style="color: var(--cyber-accent);"></i>
+								<h4>Certified Expert</h4>
+								<p>MCSA | Ethical Hacking Diploma | 10+ Years hands-on experience.</p>
+							</div>
+						</div>
+					</div>
+					<div class="mt-5">
+						<blockquote class="blockquote text-center p-5 bg-card rounded-3">
+							<p class="mb-0 lead">"In cybersecurity, the best defense is relentless offense. I find the
+								weaknesses so you don't have to."</p>
+							<footer class="blockquote-footer mt-3">Nikhil Raghav</footer>
+						</blockquote>
+					</div>
+				</div>
+			</div>
+		</div>
+	</section>
 
-    <!-- Download CV button links to your CV PDF -->
-    <a href="files/Nikhil_Raghav_CV.pdf" target="_blank" class="btn btn-secondary px-4 py-2 btn-sm">
-        Download CV
-    </a>
-</p>
+	<!-- Contact Section -->
+	<section class="site-section bg-light" id="section-contact">
+		<div class="container">
+			<div class="row">
+				<div class="col-md-12 mb-5">
+					<div class="section-heading text-center">
+						<h2>Let's <strong>Connect</strong></h2>
+					</div>
+				</div>
+				<div class="col-lg-8 mb-5 mb-lg-0">
+					<form action="#" class="contact-form" id="contactForm">
+						<div class="row">
+							<div class="col-md-6 mb-4">
+								<input type="text" class="form-control" id="name" placeholder="Full Name" required>
+							</div>
+							<div class="col-md-6 mb-4">
+								<input type="email" class="form-control" id="email" placeholder="Email Address"
+									required>
+							</div>
+						</div>
+						<div class="row">
+							<div class="col-md-6 mb-4">
+								<input type="tel" class="form-control" id="phone" placeholder="Phone Number">
+							</div>
+							<div class="col-md-6 mb-4">
+								<input type="text" class="form-control" id="company" placeholder="Company / Project">
+							</div>
+						</div>
+						<div class="form-group mb-5">
+							<textarea class="form-control" id="message" rows="8"
+								placeholder="Tell me about your cybersecurity needs..." required></textarea>
+						</div>
+						<button type="submit" class="btn btn-primary btn-lg px-6">
+							<i class="fas fa-paper-plane mr-3"></i>Launch Mission
+						</button>
+					</form>
+				</div>
+				<div class="col-lg-4">
+					<div class="contact-widget p-5 bg-card rounded-3 glow">
+						<h3 class="mb-4"><i class="fas fa-rocket mr-3" style="color: var(--cyber-primary);"></i>Ready to
+							Secure?</h3>
+						<div class="contact-item mb-4">
+							<i class="fas fa-envelope fa-2x mb-3 d-block" style="color: var(--cyber-primary);"></i>
+							<h5>nikhilraghav@mail.com</h5>
+						</div>
+						<div class="contact-item mb-4">
+							<i class="fas fa-phone fa-2x mb-3 d-block" style="color: var(--cyber-green);"></i>
+							<h5>+91 851 283 2150</h5>
+						</div>
+						<div class="contact-item mb-5">
+							<i class="fas fa-map-marker-alt fa-2x mb-3 d-block" style="color: var(--cyber-red);"></i>
+							<h5>New Delhi, India</h5>
+							<p>Block C, Palam, Delhi 110045</p>
+						</div>
+						<div class="availability">
+							<h6>🚀 Availability</h6>
+							<p><strong>Full-time</strong> | Immediate Start | Remote/Onsite</p>
+						</div>
+					</div>
+				</div>
+			</div>
+		</div>
+	</section>
+
+	<!-- Footer -->
+	<footer class="site-footer py-5">
+		<div class="container">
+			<div class="row">
+				<div class="col-md-12 text-center">
+					<div class="social-links mb-5">
+						<a href="https://www.instagram.com/i_nikhilraghav/" class="social-item" target="_blank"
+							rel="noopener" title="Instagram">
+							<i class="fab fa-instagram"></i>
+						</a>
+						<a href="https://www.linkedin.com/in/iamnikhilraghav/" class="social-item" target="_blank"
+							rel="noopener" title="LinkedIn">
+							<i class="fab fa-linkedin-in"></i>
+						</a>
+						<a href="https://github.com/i-nikhilraghav" class="social-item" target="_blank" rel="noopener"
+							title="GitHub">
+							<i class="fab fa-github"></i>
+						</a>
+					</div>
+					<p class="mb-0" style="font-size: 0.95rem;">
+						&copy; 2025 <strong>Nikhil Raghav</strong> |
+						IT Specialist |
+						<span style="color: var(--cyber-primary);">Protected by Advanced Security</span>
 					</p>
 				</div>
 			</div>
 		</div>
-	</section>
+	</footer>
 
+	<!-- Scripts -->
+	<script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
+	<script src="https://cdn.jsdelivr.net/npm/popper.js@1.16.1/dist/umd/popper.min.js"></script>
+	<script src="https://cdn.jsdelivr.net/npm/bootstrap@4.6.0/dist/js/bootstrap.min.js"></script>
+	<script src="https://cdnjs.cloudflare.com/ajax/libs/jquery-easing/1.4.1/jquery.easing.min.js"></script>
 
-	<section class="site-section" id="section-contact">
-		<div class="container">
-			<div class="row">
-				<div class="col-md-12 mb-5">
-					<div class="section-heading text-center">
-						<h2>Get <strong>In Touch</strong></h2>
-					</div>
-				</div>
+	<script>
+		// Advanced Theme Toggle
+		const themeToggle = document.getElementById('themeToggle');
+		const body = document.body;
+		const icon = themeToggle.querySelector('i');
 
-				<div class="col-md-7 mb-5 mb-md-0">
-					<form action="" class="site-form">
-						<h3 class="mb-5">Get In Touch</h3>
-						<div class="form-group">
-							<input type="text" class="form-control px-3 py-4" placeholder="Your Name">
-						</div>
-						<div class="form-group">
-							<input type="email" class="form-control px-3 py-4" placeholder="Your Email">
-						</div>
-						<div class="form-group">
-							<input type="email" class="form-control px-3 py-4" placeholder="Your Phone">
-						</div>
-						<div class="form-group mb-5">
-							<textarea class="form-control px-3 py-4"cols="30" rows="10" placeholder="Write a Message"></textarea>
-						</div>
-						<div class="form-group">
-							<input type="submit" class="btn btn-primary  px-4 py-3" value="Send Message">
-						</div>
-					</form>
-				</div>
-				<div class="col-md-5 pl-md-5">
-					<h3 class="mb-5">My Contact Details</h3>
-					<ul class="site-contact-details">
-						<li>
-							<span class="text-uppercase">Email</span>
-							nikhilraghav@mail.com
-						</li>
-						<li>
-							<span class="text-uppercase">Phone</span>
-							+91 851 283 2150
-						</li>
-						<li>
-							<span class="text-uppercase">Address</span>
-						 <!-- Location Block (New Addition) -->
-                        <div class="mb-8">
-                          <div class="inline-block p-4 rounded-xl bg-gray-100 dark:bg-gray-700 shadow-md">
-                             <div class="flex items-center justify-center text-left space-x-3">
-                             <i class="fas fa-map-marker-alt text-lg text-red-500"></i>
-                                <address class="not-italic text-gray-700 dark:text-gray-300 text-sm sm:text-base">
-                            Block C, Palam, New Delhi, Delhi, 110045
-                        </address>
-						</li>
-					</ul>
-				</div>
-			</div>
-		</div>
-	</section>
+		const savedTheme = localStorage.getItem('cyberTheme') || 'dark';
+		body.setAttribute('data-theme', savedTheme);
+		updateIcon(savedTheme);
 
- <!-- FOOTER SECTION (Contact Information) -->
+		themeToggle.addEventListener('click', () => {
+			const current = body.getAttribute('data-theme');
+			const newTheme = current === 'dark' ? 'light' : 'dark';
+			body.setAttribute('data-theme', newTheme);
+			localStorage.setItem('cyberTheme', newTheme);
+			updateIcon(newTheme);
+			themeToggle.style.transform = 'rotate(180deg) scale(1.2)';
+			setTimeout(() => { themeToggle.style.transform = 'rotate(0deg) scale(1)'; }, 300);
+		});
 
-	<footer class="site-footer">
-		<div class="container">
-    <div class="container text-center">
-        <!-- Social Links -->
-             <div class="row mb-5">
-               <div class="col-md-12 text-center">
-                  <p>
-                     <a href="https://www.facebook.com/iamnikhilraghav" class="social-item"><span class="icon-facebook2"></span></a>
-                     <a href="https://x.com/I_nikhilraghav" class="social-item"><span class="icon-twitter"></span></a>
-                     <a href="https://www.instagram.com/i_nikhilraghav/" class="social-item"><span class="icon-instagram2"></span></a>
-                     <a href="https://www.linkedin.com/in/iamnikhilraghav/" class="social-item"><span class="icon-linkedin2"></span></a>
-                     <a href="https://www.threads.com/@i_nikhilraghav" class="social-item"><span class="icon-vimeo"></span></a>
-                     <a href="https://github.com/i-nikhilraghav" class="social-item"><span class="icon-github"></span></a>
-                  </p>
-               </div>
-            </div>
+		function updateIcon(theme) {
+			if(theme === 'light') {
+				icon.className = 'fas fa-moon';
+				themeToggle.style.color = '#7c3aed';
+			} else {
+				icon.className = 'fas fa-sun';
+				themeToggle.style.color = 'var(--cyber-primary)';
+			}
+		}
 
-        <!-- Copyright -->
-        <p class="mb-0">&copy; 2026 Nikhil Raghav. All Rights Reserved.</p>
-    </div>
-</footer>
+		// Smooth Scrolling & Navbar
+		$(document).ready(function () {
+			$('body').scrollspy({ target: '#pb-navbar', offset: 100 });
 
+			$('a[href*="#"]').click(function (e) {
+				e.preventDefault();
+				const target = $($(this).attr('href'));
+				$('html, body').animate({ scrollTop: target.offset().top - 80 }, 1200, 'easeInOutCubic');
+				$('.navbar-collapse').collapse('hide');
+			});
 
+			// Navbar scroll effect
+			$(window).scroll(() => {
+				if ($(window).scrollTop() > 100) {
+					$('.navbar').addClass('scrolled');
+				} else {
+					$('.navbar').removeClass('scrolled');
+				}
+			});
 
-	<script src="js/vendor/jquery.min.js"></script>
-	<script src="js/vendor/jquery-migrate-3.0.1.min.js"></script>
-	<script src="js/vendor/popper.min.js"></script>
-	<script src="js/vendor/bootstrap.min.js"></script>
+			// Contact form
+			$('#contactForm').submit(function (e) {
+				e.preventDefault();
+				Swal.fire({
+					icon: 'success',
+					title: 'Mission Launched!',
+					text: 'Your message has been encrypted and transmitted. I will respond within 24 hours.',
+					timer: 3000
+				});
+				$(this)[0].reset();
+			});
 
-	<script src="js/vendor/jquery.easing.1.3.js"></script>
+			// Typing effect
+			const text = "Cybersecurity Specialist";
+			let i = 0;
+			const typingElement = $('.lead');
+			const typeWriter = () => {
+				if (i < text.length) {
+					typingElement.html(text.substring(0, i + 1) + '<span class="blink">_</span>');
+					i++;
+					setTimeout(typeWriter, 100);
+				} else {
+					typingElement.html(text);
+				}
+			};
+			setTimeout(typeWriter, 1000);
 
-	<script src="js/vendor/jquery.stellar.min.js"></script>
-	<script src="js/vendor/jquery.waypoints.min.js"></script>
+			// Parallax
+			$(window).stellar({
+				horizontalScrolling: false,
+				verticalOffset: 40
+			});
 
-	<script src="https://unpkg.com/isotope-layout@3/dist/isotope.pkgd.min.js"></script>
-	<script src="https://unpkg.com/imagesloaded@4/imagesloaded.pkgd.min.js"></script>
-	<script src="js/custom.js"></script>
+			// Animate skills on scroll
+			const observerOptions = {
+				threshold: 0.1,
+				rootMargin: '0px 0px -50px 0px'
+			};
 
-<!-- Google Map (Optional) -->
-<!-- 
-<script src="https://maps.googleapis.com/maps/api/js?key=AIzaSyBVWaKrjvy3MaE7SQ74_uJiULgl1JY0H2s&sensor=false"></script>
-<script src="js/google-map.js"></script>
--->
+			const observer = new IntersectionObserver((entries) => {
+				entries.forEach(entry => {
+					if (entry.isIntersecting) {
+						entry.target.style.opacity = '1';
+						entry.target.style.transform = 'translateY(0)';
+					}
+				});
+			}, observerOptions);
+
+			// Observe all skill items
+			document.querySelectorAll('.resume-item, .feature-box, .skill-item').forEach(el => {
+				el.style.opacity = '0';
+				el.style.transform = 'translateY(50px)';
+				el.style.transition = 'all 0.8s cubic-bezier(0.4, 0, 0.2, 1)';
+				observer.observe(el);
+			});
+		});
+
+		// Additional CSS for new elements (inline)
+		const style = document.createElement('style');
+		style.textContent = `
+		.progress { 
+			height: 8px; 
+			background: var(--border-color); 
+			border-radius: 10px; 
+			overflow: hidden; 
+		}
+		.bg-card {
+			background-color: var(--bg-card) !important;
+			color: var(--text-primary) !important;
+		}
+		.progress-bar { 
+			height: 100%; 
+			border-radius: 10px; 
+			transition: width 2s ease-in-out; 
+		}
+		.skill-item span { 
+			font-weight: 500; 
+			display: block; 
+			margin-bottom: 8px; 
+		}
+		.tech-badge { 
+			background: linear-gradient(45deg, var(--cyber-primary), var(--cyber-secondary)); 
+			color: white; 
+			padding: 8px 16px; 
+			border-radius: 25px; 
+			font-size: 0.85rem; 
+			font-weight: 500; 
+			transition: all 0.3s ease; 
+		}
+		.tech-badge:hover { 
+			transform: scale(1.05); 
+			box-shadow: 0 5px 15px rgba(0,212,255,0.4); 
+		}
+		.feature-box { 
+			background: var(--bg-card); 
+			border: 1px solid var(--border-color); 
+			border-radius: 20px; 
+			transition: all 0.4s ease; 
+			cursor: pointer; 
+		}
+		.feature-box:hover { 
+			transform: translateY(-10px); 
+			border-color: var(--cyber-primary); 
+			box-shadow: 0 20px 40px rgba(0,212,255,0.2); 
+		}
+		.contact-widget { 
+			border: 1px solid var(--border-color); 
+			height: fit-content; 
+			color: var(--text-primary) !important;
+		}
+		.contact-widget h3, .contact-widget h5, .contact-widget h6, .contact-widget p {
+			color: var(--text-primary) !important;
+		}
+		.blink { 
+			animation: blink 1s infinite; 
+		}
+		@keyframes blink { 
+			0%, 50% { opacity: 1; } 
+			51%, 100% { opacity: 0; } 
+		}
+		.navbar.scrolled { 
+			background: rgba(10,10,10,0.98) !important; 
+			padding: 0.5rem 0; 
+		}
+		@media (max-width: 768px) { 
+			.site-hero h1 { font-size: 2.5rem !important; } 
+		}
+	`;
+		document.head.appendChild(style);
+	</script>
+
+	<!-- SweetAlert2 for notifications -->
+	<script src="https://cdn.jsdelivr.net/npm/sweetalert2@11"></script>
 
 </body>
+
 </html>
