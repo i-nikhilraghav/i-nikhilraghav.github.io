@@ -153,14 +153,20 @@
 	
 	
 	var siteStellar = function() {
-		$(window).stellar({
-	    responsive: true,
-	    parallaxBackgrounds: true,
-	    parallaxElements: true,
-	    horizontalScrolling: false,
-	    hideDistantElements: false,
-	    scrollProperty: 'scroll'
-	  });
+		if ($.fn && $.fn.stellar) {
+			try {
+				$(window).stellar({
+					responsive: true,
+					parallaxBackgrounds: true,
+					parallaxElements: true,
+					horizontalScrolling: false,
+					hideDistantElements: false,
+					scrollProperty: 'scroll'
+				});
+			} catch (e) {
+				// Parallax fallback gracefully handled
+			}
+		}
 	};
 	
 
