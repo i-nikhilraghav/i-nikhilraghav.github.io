@@ -2,878 +2,528 @@
 <html lang="en">
 
 <head>
-	<title>Nikhil_Raghav</title>
 	<meta charset="utf-8">
 	<meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+	<title>Nikhil Raghav | IT Infrastructure & Cybersecurity Specialist</title>
 	<meta name="description"
-		content="Nikhil Raghav - IT Specialist | 10+ Years IT Experience | Ethical Hacking | Network Security | Digital Marketing">
+		content="Nikhil Raghav - IT Support & Networking Specialist | 8+ Years IT Experience | Cybersecurity Analyst | Network Security | Digital Marketer">
 	<meta name="keywords"
-		content="cybersecurity, ethical hacking, IT support, network security, penetration testing, Delhi">
+		content="cybersecurity, ethical hacking, IT support, network security, penetration testing, active directory, Delhi, Nikhil Raghav">
 
-	<link rel="stylesheet" href="css/animate.css">
-	<link rel="stylesheet" href="css/flexslider.css">
-	<link rel="stylesheet" href="fonts/icomoon/style.css">
+	<!-- Bootstrap 4 CSS -->
 	<link rel="stylesheet" href="css/bootstrap.css">
+	<!-- Custom Cyber CSS -->
 	<link rel="stylesheet" href="css/style.css">
-
-	<!-- Font Awesome -->
+	<!-- Font Awesome Icons -->
 	<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
-	<!-- Google Fonts -->
-	<link
-		href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700&family=Roboto+Mono:wght@400;500&display=swap"
-		rel="stylesheet">
-
-	<style>
-		/* NEW CYBERSECURITY THEME - DARK CYBER MATRIX */
-		:root {
-			/* Primary Cyber Colors */
-			--cyber-primary: #ffd700;
-			--cyber-secondary: #daa520;
-			--cyber-accent: #ffb300;
-			--cyber-green: #e6c200;
-			--cyber-red: #ff4757;
-
-			/* Dark Theme (Default) */
-			--bg-primary: #0a0a0a;
-			--bg-secondary: #1a1a1a;
-			--bg-card: #1e1e2e;
-			--text-primary: #cccccc;
-			--text-secondary: #888888;
-			--border-color: #333344;
-			--hero-overlay: rgba(10, 10, 10, 0.85);
-
-			/* Social Icon Theme Variables */
-			--social-bg-hover: linear-gradient(45deg, var(--cyber-primary), var(--cyber-secondary));
-			--social-shadow: rgba(0, 0, 0, 0.3);
-			--social-shadow-hover: rgba(0, 212, 255, 0.4);
-		}
-
-
-
-		* {
-			box-sizing: border-box;
-		}
-
-		body {
-			background: var(--bg-primary);
-			color: var(--text-primary);
-			transition: all 0.4s cubic-bezier(0.4, 0, 0.2, 1);
-			font-family: 'Poppins', sans-serif;
-			line-height: 1.7;
-			overflow-x: hidden;
-		}
-
-		/* Cyber Glow Effect */
-		.glow {
-			box-shadow:
-				0 0 20px rgba(0, 212, 255, 0.3),
-				0 0 40px rgba(0, 212, 255, 0.1),
-				inset 0 0 10px rgba(0, 212, 255, 0.05);
-		}
-
-		/* Navbar */
-		.navbar {
-			background: rgba(10, 10, 10, 0.95) !important;
-			backdrop-filter: blur(20px);
-			box-shadow: 0 8px 32px rgba(0, 0, 0, 0.3);
-			border-bottom: 1px solid rgba(0, 212, 255, 0.2);
-			padding: 1rem 0;
-			transition: all 0.3s ease;
-		}
-
-
-		.navbar-brand {
-			font-size: 1.8rem;
-			font-weight: 700;
-			background: linear-gradient(45deg, var(--cyber-primary), var(--cyber-secondary));
-			-webkit-background-clip: text;
-			-webkit-text-fill-color: transparent;
-			background-clip: text;
-			display: flex;
-			align-items: center;
-		}
-
-		[data-theme="dark"] .navbar-brand img,
-		[data-theme="dark"] .footer-brand img {
-			filter: brightness(0) invert(1) drop-shadow(0 0 8px rgba(255, 215, 0, 0.3));
-		}
-
-		.navbar-nav .nav-link {
-			color: var(--text-primary) !important;
-			font-weight: 500;
-			padding: 12px 25px !important;
-			position: relative;
-			transition: all 0.3s ease;
-		}
-
-		.navbar-nav .nav-link::after {
-			content: '';
-			position: absolute;
-			width: 0;
-			height: 2px;
-			bottom: 0;
-			left: 50%;
-			background: var(--cyber-primary);
-			transition: all 0.3s ease;
-		}
-
-		.navbar-nav .nav-link:hover::after {
-			width: 80%;
-			left: 10%;
-		}
-
-		/* --- SITE HERO CUSTOM CSS --- */
-
-		/* Best practice: Set body height for full-screen elements */
-		body,
-		html {
-			height: 100%;
-			margin: 0;
-		}
-
-		.site-hero {
-			position: relative;
-			height: 100vh;
-			/* Set to 100% of the viewport height */
-			width: 100%;
-			overflow: hidden;
-			background-color: #1a1a1a;
-			/* Fallback color in case video doesn't load */
-			color: #ffffff;
-			display: flex;
-			/* Centers container content within the full-height section */
-			align-items: center;
-			justify-content: center;
-		}
-
-		/* 1. Full-screen background video and placement */
-		.site-hero-video {
-			position: absolute;
-			top: 0;
-			left: 0;
-			width: 100%;
-			height: 100%;
-			object-fit: cover;
-			/* Ensures video covers full area without distortion */
-			z-index: 0;
-			/* Places video behind all content */
-		}
-
-		/* 2. Overlays and Readability (Crucial step for a pro look) */
-		.site-hero-overlay {
-			position: absolute;
-			top: 0;
-			left: 0;
-			width: 100%;
-			height: 100%;
-			/* Subtle dark gradient overlay to guarantee text readability */
-			background: linear-gradient(to bottom, rgba(0, 0, 0, 0.65) 0%, rgba(0, 0, 0, 0.4) 100%);
-			z-index: 1;
-			/* Overlay sits between video and text */
-		}
-
-		.site-hero-container {
-			position: relative;
-			/* Places container above video and overlay */
-			z-index: 2;
-			/* Ensures text and buttons are clickable */
-		}
-
-		/* 3. Modern Tech Typography */
-		.site-hero-title {
-			font-weight: 700;
-			/* Extra bold */
-			text-transform: uppercase;
-			letter-spacing: 2px;
-			color: #ffffff;
-			line-height: 1.1;
-			/* Responsive font sizing (requires Bootstrap's display-X classes, which I added to HTML) */
-			font-size: calc(2.5rem + 1.5vw);
-		}
-
-		.site-hero-tagline {
-			color: rgba(255, 255, 255, 0.9);
-			/* Bright white with subtle transparency */
-			font-weight: 300;
-			/* Clean and precise */
-			font-size: 1.2rem;
-			line-height: 1.6;
-			letter-spacing: 0.5px;
-			max-width: 600px;
-			margin-left: auto;
-			margin-right: auto;
-		}
-
-		/* 4. Refine Mobile Spacing and Text Sizing */
-		@media (max-width: 991.98px) {
-			.site-hero {
-				padding-top: 100px;
-				/* Account for potential fixed headers on mobile */
-				padding-bottom: 80px;
-			}
-
-			.site-hero-title {
-				font-size: 2.5rem;
-			}
-
-			.site-hero-tagline {
-				font-size: 1.1rem;
-			}
-
-			/* Stack buttons centrally on mobile */
-			.site-hero-ctas .btn {
-				display: block;
-				width: 100%;
-				max-width: 320px;
-				margin-left: auto !important;
-				margin-right: auto !important;
-			}
-		}
-
-		/* 5. Enhanced Custom Bootstrap Buttons */
-		.site-hero .btn {
-			font-weight: 600;
-			letter-spacing: 1px;
-			text-transform: uppercase;
-			font-size: 0.85rem;
-			padding: 18px 40px;
-			border-radius: 30px;
-			/* Sleek rounded look */
-			transition: all 0.3s ease;
-			/* Adds smooth hover effects */
-		}
-
-		/* Primary Button customization (Trusted Tech Blue) */
-		.site-hero .btn-primary {
-			background-color: #007bff;
-			/* Use a rich, trusted blue */
-			border-color: #007bff;
-			box-shadow: 0 4px 15px rgba(0, 123, 255, 0.3);
-			/* Subtle trusted glow */
-		}
-
-		.site-hero .btn-primary:hover,
-		.site-hero .btn-primary:focus {
-			background-color: #0069d9;
-			border-color: #0062cc;
-			transform: translateY(-2px);
-			/* Subtle hover lift animation */
-			box-shadow: 0 6px 20px rgba(0, 123, 255, 0.4);
-		}
-
-		/* Outline button customization */
-		.site-hero .btn-outline-light:hover,
-		.site-hero .btn-outline-light:focus {
-			transform: translateY(-2px);
-			/* Subtle hover lift */
-			background-color: #ffffff;
-			color: #1a1a1a;
-		}
-
-		/* Sections */
-		.site-section {
-			padding: 100px 0;
-		}
-
-		.bg-light {
-			background: var(--bg-secondary) !important;
-		}
-
-		/* Global Theme overrides for Bootstrap colors */
-		h1,
-		h2,
-		h3,
-		h4,
-		h5,
-		h6 {
-			color: var(--text-primary);
-		}
-
-		.text-primary {
-			color: var(--cyber-primary) !important;
-		}
-
-		.text-muted,
-		.blockquote-footer {
-			color: var(--text-secondary) !important;
-		}
-
-		a {
-			color: var(--cyber-primary);
-		}
-
-		a:hover {
-			color: var(--cyber-secondary);
-			text-decoration: none;
-		}
-
-		/* Resume Cards */
-		.resume-item {
-			background: var(--bg-card);
-			padding: 35px;
-			border-radius: 20px;
-			border: 1px solid var(--border-color);
-			position: relative;
-			overflow: hidden;
-			transition: all 0.4s cubic-bezier(0.4, 0, 0.2, 1);
-			margin-bottom: 30px;
-		}
-
-		.resume-item::before {
-			content: '';
-			position: absolute;
-			top: 0;
-			left: 0;
-			right: 0;
-			height: 4px;
-			background: linear-gradient(90deg, var(--cyber-primary), var(--cyber-secondary), var(--cyber-accent));
-		}
-
-		.resume-item:hover {
-			transform: translateY(-15px) scale(1.02);
-			box-shadow: 0 25px 50px rgba(0, 212, 255, 0.2);
-			border-color: var(--cyber-primary);
-		}
-
-		.resume-item .date {
-			color: var(--cyber-primary);
-			font-weight: 600;
-			font-family: 'Roboto Mono', monospace;
-			font-size: 0.95rem;
-			display: block;
-			margin-bottom: 15px;
-		}
-
-		.resume-item h3 {
-			color: var(--text-primary);
-			font-size: 1.4rem;
-			font-weight: 600;
-			margin-bottom: 12px;
-		}
-
-		.resume-item .school {
-			font-weight: 600;
-			color: var(--cyber-secondary);
-			font-size: 1rem;
-			display: block;
-			margin-top: 15px;
-		}
-
-		/* Section Headings */
-		.section-heading h2 {
-			font-size: 3rem;
-			font-weight: 700;
-			background: linear-gradient(45deg, var(--text-primary), var(--cyber-primary));
-			-webkit-background-clip: text;
-			-webkit-text-fill-color: transparent;
-			background-clip: text;
-			position: relative;
-			margin-bottom: 40px;
-		}
-
-		.section-heading h2::after {
-			content: '';
-			position: absolute;
-			bottom: -15px;
-			left: 50%;
-			transform: translateX(-50%);
-			width: 80px;
-			height: 4px;
-			background: linear-gradient(90deg, var(--cyber-primary), var(--cyber-secondary));
-			border-radius: 2px;
-		}
-
-		/* Buttons */
-		.btn-primary {
-			background: linear-gradient(45deg, var(--cyber-primary), var(--cyber-secondary));
-			border: none;
-			border-radius: 50px;
-			padding: 15px 40px;
-			font-weight: 600;
-			font-size: 1.1rem;
-			text-transform: uppercase;
-			letter-spacing: 1px;
-			position: relative;
-			overflow: hidden;
-			transition: all 0.3s ease;
-		}
-
-		.btn-primary::before {
-			content: '';
-			position: absolute;
-			top: 0;
-			left: -100%;
-			width: 100%;
-			height: 100%;
-			background: linear-gradient(90deg, transparent, rgba(255, 255, 255, 0.3), transparent);
-			transition: left 0.5s;
-		}
-
-		.btn-primary:hover::before {
-			left: 100%;
-		}
-
-		/* Form */
-		.form-control {
-			background: var(--bg-card) !important;
-			border: 2px solid var(--border-color) !important;
-			color: var(--text-primary) !important;
-			border-radius: 15px;
-			padding: 18px 25px;
-			font-size: 1rem;
-			transition: all 0.3s ease;
-		}
-
-		.form-control::placeholder {
-			color: var(--text-secondary);
-			opacity: 1;
-		}
-
-		.form-control:focus {
-			color: var(--text-primary) !important;
-			border-color: var(--cyber-primary);
-			box-shadow: 0 0 0 4px rgba(0, 212, 255, 0.1);
-			background: var(--bg-card) !important;
-		}
-
-
-		/* WhatsApp - Enhanced */
-		.whatsapp-float {
-			position: fixed;
-			width: 70px;
-			height: 70px;
-			bottom: 25px;
-			right: 25px;
-			background: linear-gradient(45deg, #25d366, #00ff88);
-			color: #FFF;
-			border-radius: 50%;
-			font-size: 32px;
-			box-shadow: 0 10px 40px rgba(37, 211, 102, 0.5);
-			z-index: 1000;
-			animation: pulse 2s infinite;
-			transition: all 0.3s ease;
-			display: flex;
-			align-items: center;
-			justify-content: center;
-			text-decoration: none;
-		}
-
-		.whatsapp-float:hover {
-			transform: scale(1.15);
-			box-shadow: 0 15px 50px rgba(37, 211, 102, 0.7);
-		}
-
-		@keyframes pulse {
-			0% {
-				box-shadow: 0 10px 40px rgba(37, 211, 102, 0.5);
-			}
-
-			50% {
-				box-shadow: 0 0 30px rgba(37, 211, 102, 0.8);
-			}
-
-			100% {
-				box-shadow: 0 10px 40px rgba(37, 211, 102, 0.5);
-			}
-		}
-
-		/* Social Icons */
-		.social-item {
-			width: 50px;
-			height: 50px;
-			font-size: 20px;
-			margin: 0 12px;
-			border-radius: 12px;
-			background: var(--bg-card);
-			border: 1px solid var(--border-color);
-			color: var(--text-primary) !important;
-			display: inline-flex;
-			align-items: center;
-			justify-content: center;
-			transition: all 0.4s cubic-bezier(0.175, 0.885, 0.32, 1.275);
-			position: relative;
-			overflow: hidden;
-			text-decoration: none;
-			box-shadow: 0 4px 15px var(--social-shadow);
-		}
-
-		.social-item::before {
-			content: '';
-			position: absolute;
-			top: 0;
-			left: 0;
-			right: 0;
-			bottom: 0;
-			background: var(--social-bg-hover);
-			opacity: 0;
-			transition: opacity 0.4s ease;
-			z-index: -1;
-		}
-
-		.social-item:hover::before {
-			opacity: 1;
-		}
-
-		.social-item:hover {
-			transform: translateY(-10px) scale(1.05);
-			color: #ffffff !important;
-			border-color: transparent;
-			box-shadow: 0 15px 30px var(--social-shadow-hover);
-		}
-
-		.social-item i {
-			z-index: 1;
-			transition: transform 0.4s ease;
-		}
-
-		.social-item:hover i {
-			transform: scale(1.2);
-		}
-
-		/* Responsive */
-		@media (max-width: 768px) {
-			.site-hero h1 {
-				font-size: 2.8rem;
-			}
-
-			.section-heading h2 {
-				font-size: 2.2rem;
-			}
-
-			.theme-toggle,
-			.whatsapp-float {
-				width: 60px;
-				height: 60px;
-				font-size: 18px;
-			}
-		}
-
-		/* Scrollbar */
-		::-webkit-scrollbar {
-			width: 12px;
-		}
-
-		::-webkit-scrollbar-track {
-			background: var(--bg-secondary);
-		}
-
-		::-webkit-scrollbar-thumb {
-			background: linear-gradient(var(--cyber-primary), var(--cyber-secondary));
-			border-radius: 10px;
-		}
-	</style>
 </head>
 
-<body data-theme="dark" data-spy="scroll" data-target="#pb-navbar" data-offset="200">
+<body data-spy="scroll" data-target="#navbarCyber" data-offset="100">
 
-
-	<!-- WhatsApp Button -->
-	<a href="https://wa.me/918512832150?text=Hi%20Nikhil!%20I'm%20impressed%20by%20your%20Cybersecurity%20expertise.%20Let's%20discuss%20opportunities!"
-		class="whatsapp-float" target="_blank" rel="noopener">
-		<i class="fab fa-whatsapp"></i>
-	</a>
-
-	<!-- Navigation -->
-	<nav class="navbar navbar-expand-lg navbar-dark fixed-top" id="pb-navbar">
+	<!-- Top Navigation -->
+	<nav class="navbar navbar-expand-lg navbar-dark navbar-cyber fixed-top">
 		<div class="container">
-			<a class="navbar-brand p-0" href="#section-home">
-				<img src="images/logo_transparent.png" alt="NR Logo"
-					style="height: 60px; width: auto; object-fit: contain;">
+			<a class="navbar-brand brand-logo" href="#home">
+				<i class="fa-solid fa-shield-halved text-cyan"></i> NIKHIL RAGHAV
+				<span class="cyber-badge">SEC_OPS</span>
 			</a>
-
-			<button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarsExample09">
+			<button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarCyber"
+				aria-controls="navbarCyber" aria-expanded="false" aria-label="Toggle navigation">
 				<span class="navbar-toggler-icon"></span>
 			</button>
-			<div class="collapse navbar-collapse justify-content-md-center" id="navbarsExample09">
-				<ul class="navbar-nav">
-					<li class="nav-item"><a class="nav-link" href="#section-home">Home</a></li>
-					<li class="nav-item"><a class="nav-link" href="#section-resume">Resume</a></li>
-					<li class="nav-item"><a class="nav-link" href="#section-skills">Skills</a></li>
-					<li class="nav-item"><a class="nav-link" href="#section-about">About</a></li>
-					<li class="nav-item"><a class="nav-link" href="#section-contact">Contact</a></li>
+
+			<div class="collapse navbar-collapse" id="navbarCyber">
+				<ul class="navbar-nav ml-auto align-items-center">
+					<li class="nav-item"><a class="nav-link nav-link-cyber active" href="#home">Home</a></li>
+					<li class="nav-item"><a class="nav-link nav-link-cyber" href="#about">About</a></li>
+					<li class="nav-item"><a class="nav-link nav-link-cyber" href="#experience">Experience</a></li>
+					<li class="nav-item"><a class="nav-link nav-link-cyber" href="#skills">Skills</a></li>
+					<li class="nav-item"><a class="nav-link nav-link-cyber" href="#certifications">Certifications</a></li>
+					<li class="nav-item"><a class="nav-link nav-link-cyber" href="#terminal">CLI Terminal</a></li>
+					<li class="nav-item"><a class="nav-link nav-link-cyber" href="#contact">Contact</a></li>
+					<li class="nav-item ml-lg-3 mt-2 mt-lg-0">
+						<div class="status-pill">
+							<span class="pulse-dot"></span> OPEN TO ROLES
+						</div>
+					</li>
 				</ul>
 			</div>
 		</div>
 	</nav>
 
-	<!-- Enhanced Hero Section -->
-	<section class="site-hero" id="section-home">
-		<!-- background video -->
-		<video class="site-hero-video"
-			src="https://d8j0ntlcm91z4.cloudfront.net/user_38xzZboKViGWJOttwIXH07lWA1P/hf_20260422_191657_800d4e1f-7ab3-41af-90b6-9bd3039eb294.mp4"
-			autoplay loop muted playsinline></video>
-
-		<!-- CRUCIAL FOR READABILITY: A semi-transparent overlay -->
-		<div class="site-hero-overlay"></div>
-
-		<div class="container site-hero-container">
-			<div class="row align-items-center justify-content-center text-center">
-				<div class="col-lg-8 col-md-10">
-					<!-- Main Impact Heading (H1 for SEO) -->
-					<h1 class="site-hero-title mb-4 display-3">Network Security Expert</h1>
-
-					<!-- Supporting Tagline (H2 for Hierarchy) -->
-					<h2 class="site-hero-tagline lead mb-5">
-						10+ Years IT Infrastructure | Penetration Testing | Digital Forensics
-					</h2>
-
-					<!-- Action Buttons with Modern Styling -->
-					<div class="site-hero-ctas">
-						<a href="#section-contact" class="btn btn-primary btn-lg smoothscroll mr-lg-4 mb-3">Hire Me</a>
-						<a href="files/Nikhil_Raghav_CV.pdf" class="btn btn-outline-light btn-lg mb-3"
-							target="_blank">Download CV</a>
-					</div>
-				</div>
-			</div>
-		</div>
-	</section>
-
-	<!-- Skills Section (NEW) -->
-	<section class="site-section" id="section-skills">
+	<!-- Main Hero Section -->
+	<section id="home" class="hero-section">
 		<div class="container">
-			<div class="row">
-				<div class="col-md-12 mb-5">
-					<div class="section-heading text-center">
-						<h2>Technical <strong>Skills</strong></h2>
-					</div>
-				</div>
-			</div>
-			<div class="row">
-				<div class="col-md-6 mb-5">
-					<h3 class="mb-4"><i class="fas fa-shield-alt text-primary mr-3"></i>Cybersecurity</h3>
-					<div class="skill-item mb-4">
-						<span>Ethical Hacking & Penetration Testing</span>
-						<div class="progress mt-2">
-							<div class="progress-bar bg-cyber-primary"
-								style="width: 92%; background: linear-gradient(45deg, var(--cyber-primary), var(--cyber-green)) !important;">
-							</div>
+			<div class="hero-card">
+				<div class="row align-items-center">
+					<div class="col-lg-8">
+						<div class="status-pill mb-3">
+							<span class="pulse-dot"></span> SYSTEM OPERATIONAL // DELHI NCR, INDIA
 						</div>
-					</div>
-					<div class="skill-item mb-4">
-						<span>Network Security & Vulnerability Assessment</span>
-						<div class="progress mt-2">
-							<div class="progress-bar bg-cyber-secondary"
-								style="width: 88%; background: linear-gradient(45deg, var(--cyber-secondary), var(--cyber-accent)) !important;">
-							</div>
+						<h1 class="hero-title">
+							Hi, I'm <span class="text-gradient">Nikhil Raghav</span>
+						</h1>
+						<div class="hero-subtitle">
+							> IT Support & Networking Specialist | Aspiring Cybersecurity Analyst
 						</div>
-					</div>
-					<div class="skill-item mb-4">
-						<span>Cryptography & Incident Response</span>
-						<div class="progress mt-2">
-							<div class="progress-bar bg-cyber-green"
-								style="width: 85%; background: var(--cyber-green) !important;"></div>
-						</div>
-					</div>
-					<div class="skill-item mb-4">
-						<span>Cloud Security & Compliance</span>
-						<div class="progress mt-2">
-							<div class="progress-bar bg-cyber-primary"
-								style="width: 82%; background: linear-gradient(45deg, var(--cyber-accent), var(--cyber-primary)) !important;">
-							</div>
-						</div>
-					</div>
-				</div>
-				<div class="col-md-6 mb-5">
-					<h3 class="mb-4"><i class="fas fa-network-wired text-primary mr-3"></i>IT Infrastructure</h3>
-					<div class="skill-item mb-4">
-						<span>Windows Server Administration (MCSA)</span>
-						<div class="progress mt-2">
-							<div class="progress-bar bg-cyber-red"
-								style="width: 90%; background: linear-gradient(45deg, var(--cyber-red), var(--cyber-primary)) !important;">
-							</div>
-						</div>
-					</div>
-					<div class="skill-item mb-4">
-						<span>Networking (LAN/WAN, CCTV Systems)</span>
-						<div class="progress mt-2">
-							<div class="progress-bar bg-cyber-primary" style="width: 87%;"></div>
-						</div>
-					</div>
-					<div class="skill-item mb-4">
-						<span>Hardware Troubleshooting & Maintenance</span>
-						<div class="progress mt-2">
-							<div class="progress-bar bg-cyber-secondary" style="width: 89%;"></div>
-						</div>
-					</div>
-					<div class="skill-item mb-4">
-						<span>Virtualization & Cloud Computing</span>
-						<div class="progress mt-2">
-							<div class="progress-bar bg-cyber-green"
-								style="width: 85%; background: linear-gradient(45deg, var(--cyber-green), var(--cyber-secondary)) !important;">
-							</div>
-						</div>
-					</div>
-				</div>
-				<div class="col-md-6 mb-5">
-					<h3 class="mb-4"><i class="fas fa-chart-line text-primary mr-3"></i>Digital Marketing</h3>
-					<div class="skill-item mb-4">
-						<span>SEO/SEM & Google Analytics</span>
-						<div class="progress mt-2">
-							<div class="progress-bar"
-								style="width: 82%; background: linear-gradient(45deg, var(--cyber-accent), var(--cyber-green)) !important;">
-							</div>
-						</div>
-					</div>
-					<div class="skill-item mb-4">
-						<span>Social Media Strategy & Management</span>
-						<div class="progress mt-2">
-							<div class="progress-bar" style="width: 80%;"></div>
-						</div>
-					</div>
-					<div class="skill-item mb-4">
-						<span>Content & Email Marketing</span>
-						<div class="progress mt-2">
-							<div class="progress-bar"
-								style="width: 85%; background: linear-gradient(45deg, var(--cyber-primary), var(--cyber-secondary)) !important;">
-							</div>
-						</div>
-					</div>
-				</div>
-				<div class="col-md-6 mb-5">
-					<h3 class="mb-4"><i class="fas fa-tools text-primary mr-3"></i>Tools & Technologies</h3>
-					<div class="tech-stack d-flex flex-wrap">
-						<span class="tech-badge mr-2 mb-2">Kali Linux</span>
-						<span class="tech-badge mr-2 mb-2">Metasploit</span>
-						<span class="tech-badge mr-2 mb-2">Wireshark</span>
-						<span class="tech-badge mr-2 mb-2">Nmap</span>
-						<span class="tech-badge mr-2 mb-2">Burp Suite</span>
-						<span class="tech-badge mr-2 mb-2">Active Directory</span>
-						<span class="tech-badge mr-2 mb-2">AWS</span>
-						<span class="tech-badge mr-2 mb-2">visual studio code</span>
-						<span class="tech-badge mr-2 mb-2">Google Ads</span>
-						<span class="tech-badge mr-2 mb-2">Python</span>
-						<span class="tech-badge mr-2 mb-2">Bash</span>
-						<span class="tech-badge mr-2 mb-2">Git</span>
-					</div>
-				</div>
-			</div>
-		</div>
-	</section>
-
-	<!-- Resume Section -->
-	<section class="site-section bg-light" id="section-resume">
-		<div class="container">
-			<div class="row">
-				<div class="col-md-12 mb-5">
-					<div class="section-heading text-center">
-						<h2>Professional <strong>Experience</strong></h2>
-					</div>
-				</div>
-				<div class="col-md-6">
-					<h3 class="mb-5 glow"><i class="fas fa-graduation-cap mr-3"></i>Education & Certifications</h3>
-					<div class="resume-item">
-						<span class="date"><i class="fas fa-calendar-alt mr-2"></i>Oct 2025 - Present</span>
-						<h3>Diploma in Cyber Security / Ethical Hacking</h3>
-						<p><strong>Key Skills:</strong> Penetration Testing, Network Security, Web Vulnerability
-							Assessment, Cryptography, Incident Response, Forensics</p>
-						<span class="school"><i class="fas fa-certificate mr-2"></i>Alison • 120+ Hours</span>
-					</div>
-					<div class="resume-item">
-						<span class="date"><i class="fas fa-calendar-alt mr-2"></i>Mar 2022 - Oct 2022</span>
-						<h3>Masters in Digital Marketing</h3>
-						<h4 style="font-size: 1.1rem; color: var(--cyber-secondary); margin-bottom: 12px;">Gained
-							hands-on experience in executing data-driven digital marketing strategies, campaign
-							management</h4>
-						<p><strong>Key Skills:</strong> Advanced SEO, Google Ads, Facebook Ads, Analytics, Conversion
-							Optimization</p>
-						<span class="school"><i class="fas fa-certificate mr-2"></i>Delhi Institute of Digital Marketing
-							(DIDM)</span>
-					</div>
-					<div class="resume-item">
-						<span class="date"><i class="fas fa-calendar-alt mr-2"></i>Aug 2016 - Aug 2017</span>
-						<h3>Jetking
-							Certified Hardware & Networking Engineer (JCHNE+) / Microsoft Certified System Administrator
-							(MCSA)</h3>
-						<h4 style="font-size: 1.1rem; color: var(--cyber-secondary); margin-bottom: 12px;"></h4>
-						<p><strong>Key Skills:</strong> Computer Hardware, Troubleshooting, LAN/WAN, TCP/IP, DNS, DHCP,
-							Router Configuration, Switch Management, Windows Server, Active Directory,
+						<p class="hero-summary">
+							Dedicated IT professional with over 8 years of experience in IT hardware support, network administration, active directory, and systems troubleshooting. Actively transitioning into dedicated Cybersecurity & Technical Defense roles.
 						</p>
-						<span class="school"><i class="fas fa-certificate mr-2"></i>Microsoft • Jetking</span>
+						<div class="d-flex flex-wrap gap-3 mt-4">
+							<a href="#contact" class="btn btn-cyber-primary mr-3">
+								<i class="fa-solid fa-paper-plane"></i> Get In Touch
+							</a>
+							<a href="#terminal" class="btn btn-cyber-outline">
+								<i class="fa-solid fa-terminal"></i> Launch CLI Terminal
+							</a>
+						</div>
 					</div>
-				</div>
-				<div class="col-md-6">
-					<h3 class="mb-5 glow"><i class="fas fa-briefcase mr-3"></i>Work Experience</h3>
-					<div class="resume-item">
-						<span class="date"><i class="fas fa-calendar-alt mr-2"></i>Jan 2023 - Aug 2025</span>
-						<h3>Senior IT Support & Networking Lead</h3>
-						<p>Led network infrastructure projects, cybersecurity implementations, and IT operations for 50+
-							clients. Managed CCTV security systems and performed vulnerability assessments.</p>
-						<span class="school"><i class="fas fa-building mr-2"></i>R.K. Computer Sales & Service</span>
-					</div>
-					<div class="resume-item">
-						<span class="date"><i class="fas fa-calendar-alt mr-2"></i>Jan 2019 - Mar 2022</span>
-						<h3>IT Support / CCTV Security Technician</h3>
-						<p>Designed and deployed enterprise CCTV systems, network troubleshooting, and hardware
-							maintenance for commercial clients. Provided on-site and remote technical support, ensuring
-							system uptime, security monitoring, and efficient resolution of hardware and network issues.
-						</p>
-						<span class="school"><i class="fas fa-building mr-2"></i>R.K. Computer Sales & Service</span>
-					</div>
-					<div class="resume-item">
-						<span class="date"><i class="fas fa-calendar-alt mr-2"></i>Apr 2015 - Present</span>
-						<h3>IT Consultant / Co-Owner</h3>
-						<p>Provided software security consulting, system optimization, and network setup for SMBs and
-							individual clients. Delivered ongoing technical support, cybersecurity solutions, and
-							strategic IT guidance to improve business operations.</p>
-						<span class="school"><i class="fas fa-user-tie mr-2"></i><a
-								href="https://shriraghavtech.github.io/" target="_blank">ShriraghavTech</a></span>
+
+					<div class="col-lg-4 mt-5 mt-lg-0">
+						<div class="row g-3">
+							<div class="col-6">
+								<div class="stat-box">
+									<span class="stat-number">8+</span>
+									<span class="stat-label">Years IT Exp</span>
+								</div>
+							</div>
+							<div class="col-6">
+								<div class="stat-box">
+									<span class="stat-number">6+</span>
+									<span class="stat-label">Certifications</span>
+								</div>
+							</div>
+							<div class="col-6 mt-3">
+								<div class="stat-box">
+									<span class="stat-number">100%</span>
+									<span class="stat-label">SLA Benchmark</span>
+								</div>
+							</div>
+							<div class="col-6 mt-3">
+								<div class="stat-box">
+									<span class="stat-number">#1</span>
+									<span class="stat-label">SEO Rank Target</span>
+								</div>
+							</div>
+						</div>
 					</div>
 				</div>
 			</div>
 		</div>
 	</section>
 
-	<!-- About Section -->
-	<section class="site-section" id="section-about">
+	<!-- About & Professional Summary -->
+	<section id="about" class="py-5">
 		<div class="container">
-			<div class="row align-items-center">
-				<div class="col-lg-5 mb-5 mb-lg-0 text-center">
-					<img src="images/image_1.jpg" alt="Nikhil Raghav - Cybersecurity Expert"
-						class="img-fluid shadow-lg glow"
-						style="width: 100%; max-width: 450px; aspect-ratio: 1; border-radius: 50%; object-fit: cover; border: 4px solid var(--cyber-primary);">
+			<div class="section-header">
+				<span class="section-subtitle">01. Overview</span>
+				<h2 class="section-title">Professional Summary</h2>
+			</div>
+
+			<div class="row">
+				<div class="col-lg-8 mx-auto">
+					<div class="timeline-card">
+						<p class="lead text-light mb-3">
+							I am a dedicated professional with a passion for Cybersecurity and IT Infrastructure, possessing over 8 years of professional experience in IT hardware support, network administration, and systems troubleshooting.
+						</p>
+						<p class="text-muted">
+							Having established a strong technical foundation, I am now looking for a challenging position where I can transition into a dedicated security role. My technical pursuits extend beyond the workplace; I actively engage in website development, create automation scripts in Python, and maintain a personal technical blog, which continuously sharpens my analytical skills.
+						</p>
+						<p class="text-muted mb-0">
+							With core competencies in network defense, technical troubleshooting, and a tenacious work ethic, my eventual goal is to become a Cybersecurity Specialist. I thrive in complex technical environments, value clear communication, and remain highly focused on organizational security and growth outcomes.
+						</p>
+					</div>
 				</div>
-				<div class="col-lg-7">
-					<div class="section-heading mb-5">
-						<h2>Why <strong>Choose Me?</strong></h2>
+			</div>
+		</div>
+	</section>
+
+	<!-- Professional Experience -->
+	<section id="experience" class="py-5 bg-secondary-dark">
+		<div class="container">
+			<div class="section-header">
+				<span class="section-subtitle">02. Career History</span>
+				<h2 class="section-title">Professional Experience</h2>
+			</div>
+
+			<!-- Filter Controls -->
+			<div class="filter-container">
+				<button class="filter-btn active" data-filter="all">All Roles</button>
+				<button class="filter-btn" data-filter="it-security">IT & Network Defense</button>
+				<button class="filter-btn" data-filter="marketing">Digital Marketing & SEO</button>
+				<button class="filter-btn" data-filter="consulting">Consulting & Support</button>
+			</div>
+
+			<div class="row" id="experienceList">
+				<!-- Role 1 -->
+				<div class="col-12 filter-item it-security consulting">
+					<div class="timeline-card">
+						<div class="role-header">
+							<div>
+								<h3 class="role-title">Freelance IT Consultant</h3>
+								<div class="company-name">
+									<i class="fa-solid fa-building"></i> Shriraghav Tech, New Delhi
+								</div>
+							</div>
+							<span class="period-badge">Aug 2025 – Present</span>
+						</div>
+						<ul class="timeline-bullets">
+							<li>Founder specializing in comprehensive IT solutions including hardware repair, system optimization, data recovery, and cybersecurity for commercial and SMB clients across Delhi NCR.</li>
+						</ul>
 					</div>
-					<div class="row">
-						<div class="col-md-6 mb-4">
-							<div class="feature-box text-center p-4 glow">
-								<i class="fas fa-shield-alt fa-3x mb-3" style="color: var(--cyber-primary);"></i>
-								<h4>Proactive Security</h4>
-								<p>Identify vulnerabilities before attackers do. 100+ successful pentests.</p>
+				</div>
+
+				<!-- Role 2 -->
+				<div class="col-12 filter-item it-security">
+					<div class="timeline-card">
+						<div class="role-header">
+							<div>
+								<h3 class="role-title">Senior IT Technician</h3>
+								<div class="company-name">
+									<i class="fa-solid fa-network-wired"></i> R.K. Computer Sales & Service, Delhi
+								</div>
 							</div>
+							<span class="period-badge">Jan 2019 – Mar 2022 | Jan 2023 – Aug 2025</span>
 						</div>
-						<div class="col-md-6 mb-4">
-							<div class="feature-box text-center p-4 glow">
-								<i class="fas fa-bolt fa-3x mb-3" style="color: var(--cyber-green);"></i>
-								<h4>24/7 Response</h4>
-								<p>Proven capability in critical incident response within 2 hours, leveraging digital
-									forensic insights for immediate threat identification, containment, and resolution.
-								</p>
+						<p class="text-muted small">Administered Active Directory services, DNS, DHCP, and GPOs to maintain peak network stability and performance metrics.</p>
+						<ul class="timeline-bullets">
+							<li><strong>Network Defense:</strong> Managed the deployment and secure configuration of LAN/WAN infrastructures, including enterprise routers and perimeter firewalls.</li>
+							<li><strong>Operations Leadership:</strong> Oversaw IT support for SMB portfolios and mentored technical staff to enhance organizational service delivery.</li>
+							<li><strong>Technical Resolution:</strong> Provided expert troubleshooting for intricate hardware and software failures, managing escalations for critical system issues.</li>
+							<li><strong>SLA Management:</strong> Surpassed ticket resolution benchmarks while ensuring high levels of client satisfaction and technical excellence.</li>
+							<li><strong>Infrastructure Maintenance:</strong> Executed system debugging and performance monitoring for commercial platforms while upholding strict equipment security protocols.</li>
+						</ul>
+					</div>
+				</div>
+
+				<!-- Role 3 -->
+				<div class="col-12 filter-item marketing consulting">
+					<div class="timeline-card">
+						<div class="role-header">
+							<div>
+								<h3 class="role-title">Digital Marketing & IT Consultant</h3>
+								<div class="company-name">
+									<i class="fa-solid fa-chart-line"></i> Self-employed, New Delhi
+								</div>
 							</div>
+							<span class="period-badge">Apr 2022 – Jan 2023</span>
 						</div>
-						<div class="col-md-6 mb-4">
-							<div class="feature-box text-center p-4 glow">
-								<i class="fas fa-users fa-3x mb-3" style="color: var(--cyber-secondary);"></i>
-								<h4>Team Leadership</h4>
-								<p>Managed IT teams of 6+. Delivered projects on time, under budget.</p>
+						<ul class="timeline-bullets">
+							<li><strong>Marketing Strategy:</strong> Managed end-to-end digital campaigns, achieving a 20-30% increase in social media reach and follower engagement for diverse clients.</li>
+							<li><strong>SEO Excellence:</strong> Implemented data-driven SEO and backlink strategies that significantly improved clients' online visibility and search engine rankings.</li>
+							<li><strong>Technical Consulting:</strong> Provided specialized freelance IT support and network management services for small businesses.</li>
+						</ul>
+					</div>
+				</div>
+
+				<!-- Role 4 -->
+				<div class="col-12 filter-item marketing">
+					<div class="timeline-card">
+						<div class="role-header">
+							<div>
+								<h3 class="role-title">Freelance Webmaster & Digital Marketing Consultant</h3>
+								<div class="company-name">
+									<i class="fa-solid fa-laptop-code"></i> Black Motion Studio
+								</div>
 							</div>
+							<span class="period-badge">2022 – 2024</span>
 						</div>
-						<div class="col-md-6 mb-4">
-							<div class="feature-box text-center p-4 glow">
-								<i class="fas fa-award fa-3x mb-3" style="color: var(--cyber-accent);"></i>
-								<h4>Certified Expert</h4>
-								<p>MCSA | Ethical Hacking Diploma | 10+ Years hands-on experience.</p>
+						<ul class="timeline-bullets">
+							<li><strong>Website Monitoring:</strong> Actively monitored website activity and performance to ensure optimal user experience and traffic flow.</li>
+							<li><strong>Client Acquisition:</strong> Developed and executed comprehensive multi-channel digital marketing strategies to reach and convert potential clients.</li>
+						</ul>
+					</div>
+				</div>
+
+				<!-- Role 5 -->
+				<div class="col-12 filter-item it-security">
+					<div class="timeline-card">
+						<div class="role-header">
+							<div>
+								<h3 class="role-title">Contract Field Services Engineer</h3>
+								<div class="company-name">
+									<i class="fa-solid fa-server"></i> Nykaa, Rajokri, New Delhi
+								</div>
 							</div>
+							<span class="period-badge">Feb 2022 – Mar 2022</span>
+						</div>
+						<p class="text-muted small">Provided L1/L2 technical support on-site for various departments, maintaining consistent IT operations and system availability. Oversaw end-user assistance, hardware rollouts, and problem resolution.</p>
+						<ul class="timeline-bullets">
+							<li><strong>Hardware Resolution:</strong> Addressed failures for desktops, printers, and laptops through component-level repairs and replacements.</li>
+							<li><strong>Network & System Admin:</strong> Supported macOS and Windows environments via regular updates; resolved VPN and LAN/Wi-Fi connectivity issues.</li>
+							<li><strong>Access & Deployment:</strong> Managed system imaging and equipment inventory while setting up MFA to facilitate secure user access.</li>
+							<li><strong>Service Delivery & Security:</strong> Managed helpdesk tickets to meet strict SLA targets and educated staff on safe browsing habits and data backup protocols.</li>
+						</ul>
+					</div>
+				</div>
+
+				<!-- Role 6 -->
+				<div class="col-12 filter-item marketing">
+					<div class="timeline-card">
+						<div class="role-header">
+							<div>
+								<h3 class="role-title">Freelance SEO & Social Media Specialist</h3>
+								<div class="company-name">
+									<i class="fa-solid fa-bullhorn"></i> Geekybug | Lappyguardian | Lapocare
+								</div>
+							</div>
+							<span class="period-badge">2022 – 2024</span>
+						</div>
+						<ul class="timeline-bullets">
+							<li><strong>Audience Growth:</strong> Created engaging social media content and orchestrated high-impact campaigns that scaled brand reach.</li>
+							<li><strong>Search Optimization:</strong> Achieved #1 organic search ranking for Lapo Care through data-driven keyword strategies and technical SEO audits.</li>
+							<li><strong>Analyst Operations:</strong> Supervised campaign ROI and CRM metrics to drive strategic marketing growth.</li>
+						</ul>
+					</div>
+				</div>
+
+				<!-- Role 7 -->
+				<div class="col-12 filter-item it-security">
+					<div class="timeline-card">
+						<div class="role-header">
+							<div>
+								<h3 class="role-title">Freelance CCTV Camera Technician</h3>
+								<div class="company-name">
+									<i class="fa-solid fa-video"></i> Self-employed, New Delhi
+								</div>
+							</div>
+							<span class="period-badge">Jan 2018 – Mar 2019</span>
+						</div>
+						<ul class="timeline-bullets">
+							<li><strong>System Deployment:</strong> Installed, maintained, and repaired complex CCTV systems and IP cameras for residential and commercial clients.</li>
+							<li><strong>Surveillance Oversight:</strong> Monitored footage to identify and report suspicious activities, ensuring site physical security.</li>
+						</ul>
+					</div>
+				</div>
+
+				<!-- Role 8 -->
+				<div class="col-12 filter-item consulting">
+					<div class="timeline-card">
+						<div class="role-header">
+							<div>
+								<h3 class="role-title">Freelance Junior IT Support Technician</h3>
+								<div class="company-name">
+									<i class="fa-solid fa-headset"></i> Self-employed, New Delhi
+								</div>
+							</div>
+							<span class="period-badge">Nov 2017 – Jan 2018</span>
+						</div>
+						<ul class="timeline-bullets">
+							<li><strong>Helpdesk Support:</strong> Provided first-level technical support for internal users via phone, email, and remote access tools.</li>
+							<li><strong>System Configuration:</strong> Installed and configured desktops, laptops, and peripheral devices following ITIL best practices.</li>
+						</ul>
+					</div>
+				</div>
+
+			</div>
+		</div>
+	</section>
+
+	<!-- Technical Skills Matrix -->
+	<section id="skills" class="py-5">
+		<div class="container">
+			<div class="section-header">
+				<span class="section-subtitle">03. Technical Capabilities</span>
+				<h2 class="section-title">Skills & Competencies</h2>
+			</div>
+
+			<div class="row g-4">
+				<!-- Category 1 -->
+				<div class="col-md-6 mb-4">
+					<div class="skill-card">
+						<div class="skill-category-title text-cyan">
+							<i class="fa-solid fa-shield-virus"></i> Security & Networking
+						</div>
+						<div class="skill-tags">
+							<span class="skill-tag">Ethical Hacking</span>
+							<span class="skill-tag">Firewalls Configuration</span>
+							<span class="skill-tag">Multi-Factor Authentication (MFA)</span>
+							<span class="skill-tag">CCTV & IP Surveillance</span>
+							<span class="skill-tag">Network Security</span>
+							<span class="skill-tag">Active Directory</span>
+							<span class="skill-tag">DNS & DHCP</span>
+							<span class="skill-tag">GPOs Administration</span>
+							<span class="skill-tag">LAN / WAN Architecture</span>
+							<span class="skill-tag">Routers & Switches</span>
 						</div>
 					</div>
-					<div class="mt-5">
-						<blockquote class="blockquote text-center p-5 bg-card rounded-3">
-							<p class="mb-0 lead">"In cybersecurity, the best defense is relentless offense. I find the
-								weaknesses so you don't have to."</p>
-							<footer class="blockquote-footer mt-3">Nikhil Raghav</footer>
-						</blockquote>
+				</div>
+
+				<!-- Category 2 -->
+				<div class="col-md-6 mb-4">
+					<div class="skill-card">
+						<div class="skill-category-title text-green">
+							<i class="fa-solid fa-code"></i> IT Infrastructure & Development
+						</div>
+						<div class="skill-tags">
+							<span class="skill-tag">L1 / L2 Technical Support</span>
+							<span class="skill-tag">System Imaging & Rollout</span>
+							<span class="skill-tag">Inventory Management</span>
+							<span class="skill-tag">Ticket SLA Resolution</span>
+							<span class="skill-tag">Windows Server Administration</span>
+							<span class="skill-tag">Python Automation Scripting</span>
+							<span class="skill-tag">Website Development</span>
+							<span class="skill-tag">Hardware Repair</span>
+							<span class="skill-tag">Data Recovery</span>
+						</div>
+					</div>
+				</div>
+
+				<!-- Category 3 -->
+				<div class="col-md-6 mb-4">
+					<div class="skill-card">
+						<div class="skill-category-title text-gold">
+							<i class="fa-solid fa-bullseye"></i> Digital Marketing & SEO
+						</div>
+						<div class="skill-tags">
+							<span class="skill-tag">Search Engine Optimization (SEO)</span>
+							<span class="skill-tag">PPC (Google Ads)</span>
+							<span class="skill-tag">Google Analytics 4 (GA4)</span>
+							<span class="skill-tag">Campaign Strategy</span>
+							<span class="skill-tag">Backlink Acquisition</span>
+							<span class="skill-tag">Social Media Optimization (SMO)</span>
+							<span class="skill-tag">Technical Audits</span>
+						</div>
+					</div>
+				</div>
+
+				<!-- Category 4 -->
+				<div class="col-md-6 mb-4">
+					<div class="skill-card">
+						<div class="skill-category-title text-purple">
+							<i class="fa-solid fa-screwdriver-wrench"></i> Tools & Platforms
+						</div>
+						<div class="skill-tags">
+							<span class="skill-tag">Windows & macOS</span>
+							<span class="skill-tag">Azure Admin Fundamentals</span>
+							<span class="skill-tag">Adobe Photoshop</span>
+							<span class="skill-tag">Canva</span>
+							<span class="skill-tag">ixBrowser</span>
+							<span class="skill-tag">Google AI Pro</span>
+							<span class="skill-tag">TryHackMe & CyberDefenders</span>
+						</div>
+					</div>
+				</div>
+			</div>
+		</div>
+	</section>
+
+	<!-- Certifications & Training -->
+	<section id="certifications" class="py-5 bg-secondary-dark">
+		<div class="container">
+			<div class="section-header">
+				<span class="section-subtitle">04. Credentials</span>
+				<h2 class="section-title">Certifications & Education</h2>
+			</div>
+
+			<div class="row g-4">
+				<!-- Cert 1 -->
+				<div class="col-lg-4 col-md-6 mb-4">
+					<div class="cert-card">
+						<div class="cert-icon">
+							<i class="fa-solid fa-user-shield"></i>
+						</div>
+						<h3 class="cert-title">Cybersecurity Analyst</h3>
+						<div class="cert-issuer">Cisco Networking Academy</div>
+						<p class="text-muted small">Jan 2025 – Aug 2025. Comprehensive training path covering Network Defense, Threat Management, and Ethical Hacking foundations.</p>
+					</div>
+				</div>
+
+				<!-- Cert 2 -->
+				<div class="col-lg-4 col-md-6 mb-4">
+					<div class="cert-card">
+						<div class="cert-icon">
+							<i class="fa-solid fa-terminal"></i>
+						</div>
+						<h3 class="cert-title">Practical Defense Platforms</h3>
+						<div class="cert-issuer">TryHackMe & CyberDefenders</div>
+						<p class="text-muted small">Hands-on practical cybersecurity scenario completions focused on SOC operations, threat hunting, and network defense.</p>
+					</div>
+				</div>
+
+				<!-- Cert 3 -->
+				<div class="col-lg-4 col-md-6 mb-4">
+					<div class="cert-card">
+						<div class="cert-icon">
+							<i class="fa-brands fa-microsoft"></i>
+						</div>
+						<h3 class="cert-title">MCSA: Windows Server 2012</h3>
+						<div class="cert-issuer">Microsoft | Cert # G202-9754</div>
+						<ul class="text-muted small pl-3 mb-0">
+							<li>70-410: Installing & Configuring</li>
+							<li>70-411: Administering Windows Server</li>
+							<li>70-412: Advanced Server Services</li>
+						</ul>
+					</div>
+				</div>
+
+				<!-- Cert 4 -->
+				<div class="col-lg-4 col-md-6 mb-4">
+					<div class="cert-card">
+						<div class="cert-icon">
+							<i class="fa-solid fa-chart-pie"></i>
+						</div>
+						<h3 class="cert-title">Master in Digital Marketing</h3>
+						<div class="cert-issuer">DIDM (2022)</div>
+						<p class="text-muted small">Delhi Institute of Digital Marketing certification in performance marketing, SEO, Google Ads, and analytics.</p>
+					</div>
+				</div>
+
+				<!-- Cert 5 -->
+				<div class="col-lg-4 col-md-6 mb-4">
+					<div class="cert-card">
+						<div class="cert-icon">
+							<i class="fa-brands fa-google"></i>
+						</div>
+						<h3 class="cert-title">Google Certified</h3>
+						<div class="cert-issuer">Google Ads & GA4</div>
+						<p class="text-muted small">Official certification in Google Ads campaign management and Google Analytics 4 tracking implementation.</p>
+					</div>
+				</div>
+
+				<!-- Cert 6 -->
+				<div class="col-lg-4 col-md-6 mb-4">
+					<div class="cert-card">
+						<div class="cert-icon">
+							<i class="fa-solid fa-microchip"></i>
+						</div>
+						<h3 class="cert-title">Jetking Certified Engineer (JCHNE+)</h3>
+						<div class="cert-issuer">Jetking Dwarka (2016)</div>
+						<p class="text-muted small">Hardware Maintenance, Advanced Troubleshooting, Component Repair, and LAN/WAN System Configuration.</p>
+					</div>
+				</div>
+			</div>
+		</div>
+	</section>
+
+	<!-- CLI Interactive Terminal Widget -->
+	<section id="terminal" class="py-5">
+		<div class="container">
+			<div class="section-header">
+				<span class="section-subtitle">05. Interactive Console</span>
+				<h2 class="section-title">CLI Terminal Widget</h2>
+			</div>
+
+			<div class="terminal-window">
+				<div class="terminal-header">
+					<div class="terminal-buttons">
+						<span class="terminal-btn btn-red"></span>
+						<span class="terminal-btn btn-yellow"></span>
+						<span class="terminal-btn btn-green"></span>
+					</div>
+					<div class="terminal-title">nikhil-raghav@cyber-sec-node: ~</div>
+					<div class="terminal-badge font-mono text-cyan" style="font-size: 0.75rem;">v2.4.0</div>
+				</div>
+				<div class="terminal-body" id="terminalBody">
+					<div class="terminal-output">
+						SYSTEM OPERATIONAL (v2.4.0-release)
+Type '<span class="text-cyan">help</span>' to list available commands. Try '<span class="text-cyan">whoami</span>', '<span class="text-cyan">experience</span>', '<span class="text-cyan">skills</span>', '<span class="text-cyan">certs</span>', or '<span class="text-cyan">contact</span>'.
+					</div>
+				</div>
+				<div class="px-3 pb-3">
+					<div class="terminal-input-line">
+						<span class="terminal-prompt">nikhil@sec-ops:~$</span>
+						<input type="text" id="terminalInput" class="terminal-input" placeholder="Type a command (e.g. help)..." autocomplete="off">
 					</div>
 				</div>
 			</div>
@@ -881,339 +531,228 @@
 	</section>
 
 	<!-- Contact Section -->
-	<section class="site-section bg-light" id="section-contact">
+	<section id="contact" class="py-5 bg-secondary-dark">
 		<div class="container">
-			<div class="row">
-				<div class="col-md-12 mb-5">
-					<div class="section-heading text-center">
-						<h2>Let's <strong>Connect</strong></h2>
-					</div>
-				</div>
-				<div class="col-lg-8 mb-5 mb-lg-0">
-					<form action="#" class="contact-form" id="contactForm">
-						<div class="row">
-							<div class="col-md-6 mb-4">
-								<input type="text" class="form-control" id="name" placeholder="Full Name" required>
-							</div>
-							<div class="col-md-6 mb-4">
-								<input type="email" class="form-control" id="email" placeholder="Email Address"
-									required>
-							</div>
+			<div class="section-header">
+				<span class="section-subtitle">06. Connect</span>
+				<h2 class="section-title">Get In Touch</h2>
+			</div>
+
+			<div class="row g-4 mb-5">
+				<div class="col-md-4 mb-4">
+					<div class="contact-card">
+						<div class="contact-icon">
+							<i class="fa-solid fa-envelope"></i>
 						</div>
-						<div class="row">
-							<div class="col-md-6 mb-4">
-								<input type="tel" class="form-control" id="phone" placeholder="Phone Number">
-							</div>
-							<div class="col-md-6 mb-4">
-								<input type="text" class="form-control" id="company" placeholder="Company / Project">
-							</div>
-						</div>
-						<div class="form-group mb-5">
-							<textarea class="form-control" id="message" rows="8"
-								placeholder="Tell me about your cybersecurity needs..." required></textarea>
-						</div>
-						<button type="submit" class="btn btn-primary btn-lg px-6">
-							<i class="fas fa-paper-plane mr-3"></i>Launch Mission
+						<h5>Email Address</h5>
+						<p class="text-muted font-mono mb-3">iamnikhilraghav@gmail.com</p>
+						<button class="btn btn-cyber-outline btn-cyber-sm copy-btn" data-copy="iamnikhilraghav@gmail.com">
+							<i class="fa-solid fa-copy"></i> Copy Email
 						</button>
-					</form>
+					</div>
 				</div>
-				<div class="col-lg-4">
-					<div class="contact-widget p-5 bg-card rounded-3 glow">
-						<h3 class="mb-4"><i class="fas fa-rocket mr-3" style="color: var(--cyber-primary);"></i>Ready to
-							Secure?</h3>
-						<div class="contact-item mb-4">
-							<i class="fas fa-envelope fa-2x mb-3 d-block" style="color: var(--cyber-primary);"></i>
-							<h5>nikhilraghav@mail.com</h5>
-						</div>
-						<div class="contact-item mb-4">
-							<i class="fas fa-phone fa-2x mb-3 d-block" style="color: var(--cyber-green);"></i>
-							<h5>+91 851 283 2150</h5>
-						</div>
 
-						<div class="availability">
-							<h6>🚀 Availability</h6>
-							<p><strong>Full-time</strong> | Immediate Start | Remote/Onsite</p>
+				<div class="col-md-4 mb-4">
+					<div class="contact-card">
+						<div class="contact-icon">
+							<i class="fa-solid fa-phone"></i>
 						</div>
+						<h5>Phone / WhatsApp</h5>
+						<p class="text-muted font-mono mb-3">+91 8512832150</p>
+						<button class="btn btn-cyber-outline btn-cyber-sm copy-btn" data-copy="+918512832150">
+							<i class="fa-solid fa-copy"></i> Copy Phone
+						</button>
+					</div>
+				</div>
+
+				<div class="col-md-4 mb-4">
+					<div class="contact-card">
+						<div class="contact-icon">
+							<i class="fa-solid fa-location-dot"></i>
+						</div>
+						<h5>Location</h5>
+						<p class="text-muted mb-3">Palam Colony, New Delhi - 110045, India</p>
+						<a href="https://maps.google.com/?q=Palam+Colony+New+Delhi" target="_blank" class="btn btn-cyber-outline btn-cyber-sm">
+							<i class="fa-solid fa-map-pin"></i> View Map
+						</a>
 					</div>
 				</div>
 			</div>
 
-			<!-- Embedded Map -->
-			<div class="row mt-5 pt-3">
-				<div class="col-12">
-					<div class="cyber-map glow"
-						style="border: 1px solid var(--border-color); border-radius: 20px; overflow: hidden; height: 400px; position: relative; z-index: 2;">
-						<iframe
-							src="https://maps.google.com/maps?q=RZF-34b,%20Gali%20Number%2041B,%20Block%20C,%20Sadh%20Nagar%20II,%20Palam,%20Delhi&t=&z=15&ie=UTF8&iwloc=&output=embed"
-							width="100%" height="100%" style="border:0;" allowfullscreen="" loading="lazy"></iframe>
+			<!-- Direct Contact Form -->
+			<div class="row">
+				<div class="col-lg-8 mx-auto">
+					<div class="form-cyber">
+						<h4 class="text-light mb-4 font-mono text-center">
+							<i class="fa-solid fa-paper-plane text-cyan"></i> Send A Direct Message
+						</h4>
+						<form id="contactForm">
+							<div class="row">
+								<div class="col-md-6 mb-3">
+									<label class="text-muted small">Your Name</label>
+									<input type="text" class="form-control" placeholder="John Doe" required>
+								</div>
+								<div class="col-md-6 mb-3">
+									<label class="text-muted small">Your Email</label>
+									<input type="email" class="form-control" placeholder="john@example.com" required>
+								</div>
+							</div>
+							<div class="mb-3">
+								<label class="text-muted small">Subject</label>
+								<input type="text" class="form-control" placeholder="Role Opportunity / Technical Consultation" required>
+							</div>
+							<div class="mb-4">
+								<label class="text-muted small">Message</label>
+								<textarea class="form-control" rows="4" placeholder="Hello Nikhil, I would like to discuss..." required></textarea>
+							</div>
+							<button type="submit" class="btn btn-cyber-primary btn-block">
+								<i class="fa-solid fa-paper-plane"></i> Send Message
+							</button>
+						</form>
 					</div>
 				</div>
 			</div>
+
 		</div>
 	</section>
 
-	<!-- Premium Footer -->
-	<footer class="site-footer position-relative overflow-hidden"
-		style="background-color: var(--bg-card); padding: 50px 0 15px;">
-		<!-- Top Gradient Border -->
-		<div class="footer-top-border"
-			style="position: absolute; top: 0; left: 0; right: 0; height: 3px; background: linear-gradient(90deg, transparent, var(--cyber-primary), var(--cyber-secondary), transparent); z-index: 2;">
-		</div>
-
-		<!-- Background Video -->
-		<video class="site-hero-video"
-			src="https://d8j0ntlcm91z4.cloudfront.net/user_38xzZboKViGWJOttwIXH07lWA1P/hf_20260417_061226_74f0749c-a22d-42b3-895e-5d6203bc741c.mp4"
-			autoplay loop muted playsinline
-			style="position: absolute; top: 0; left: 0; width: 100%; height: 100%; object-fit: cover; z-index: 0; opacity: 0.3;"></video>
-
-		<!-- Background Ambient Glow -->
-		<div
-			style="position: absolute; top: 100%; left: 50%; transform: translate(-50%, -50%); width: 400px; height: 300px; background: var(--cyber-primary); filter: blur(150px); opacity: 0.08; z-index: 0; pointer-events: none;">
-		</div>
-
-		<div class="container position-relative" style="z-index: 1;">
-			<div class="row">
-				<div class="col-md-12 text-center">
-					<!-- Elegant Logo -->
-					<a href="#section-home" class="footer-brand smoothscroll d-inline-block mb-3"
-						style="text-decoration: none;">
-						<img src="images/logo_transparent.png" alt="NR Logo"
-							style="height: 80px; width: auto; object-fit: contain;">
-					</a>
-
-					<!-- Elevated Tagline -->
-					<p class="mb-4 mx-auto"
-						style="color: var(--text-secondary); font-size: 1.15rem; max-width: 500px; line-height: 1.8;">
-						Crafting elegant hardware solutions and impenetrable software security architectures.
-					</p>
-
-					<!-- Premium Glowing Social Dock -->
-					<div class="social-dock position-relative mx-auto mb-4 d-flex justify-content-center align-items-center"
-						style="max-width: fit-content; padding: 10px 20px; border-radius: 100px; background: rgba(10, 10, 10, 0.4); border: 1px solid rgba(255, 215, 0, 0.15); backdrop-filter: blur(15px); box-shadow: inset 0 0 20px rgba(0,0,0,0.5), 0 10px 30px rgba(0,0,0,0.2);">
-						<a href="https://twitter.com/iamnikhilraghav" class="social-item" target="_blank" rel="noopener"
-							aria-label="Twitter"
-							style="background: transparent !important; box-shadow: none; border: none; font-size: 1.5rem; color: var(--text-primary); transition: all 0.3s ease; width: 50px; height: 50px; line-height: 50px;">
-							<i class="fab fa-twitter" style="transition: all 0.3s ease;"></i>
-						</a>
-
-						<!-- Fading Vertical Divider -->
-						<div class="social-divider"
-							style="width: 2px; height: 35px; background: linear-gradient(to bottom, transparent, var(--cyber-primary), transparent); margin: 0 10px; opacity: 0.4;">
-						</div>
-
-						<a href="https://linkedin.com/in/iamnikhilraghav" class="social-item" target="_blank"
-							rel="noopener" aria-label="LinkedIn"
-							style="background: transparent !important; box-shadow: none; border: none; font-size: 1.5rem; color: var(--text-primary); transition: all 0.3s ease; width: 50px; height: 50px; line-height: 50px;">
-							<i class="fab fa-linkedin-in" style="transition: all 0.3s ease;"></i>
-						</a>
-
-						<!-- Fading Vertical Divider -->
-						<div class="social-divider"
-							style="width: 2px; height: 35px; background: linear-gradient(to bottom, transparent, var(--cyber-secondary), transparent); margin: 0 10px; opacity: 0.4;">
-						</div>
-
-						<a href="mailto:nikhilraghav.dev@gmail.com" class="social-item" aria-label="Email"
-							style="background: transparent !important; box-shadow: none; border: none; font-size: 1.5rem; color: var(--text-primary); transition: all 0.3s ease; width: 50px; height: 50px; line-height: 50px;">
-							<i class="fas fa-envelope" style="transition: all 0.3s ease;"></i>
-						</a>
-					</div>
-
-					<hr style="border-color: var(--border-color); margin-bottom: 25px; opacity: 0.6;">
-
-					<!-- Modern Copyright & Security Badge -->
-					<div class="d-flex flex-column flex-md-row justify-content-between align-items-center">
-						<p class="mb-4 mb-md-0" style="font-size: 0.95rem; color: var(--text-secondary);">
-							&copy; 2025 <strong
-								style="color: var(--text-primary); font-weight: 600; letter-spacing: 1px;"><a
-									href="https://www.linkedin.com/in/iamnikhilraghav/" target="_blank" rel="noopener"
-									style="color: inherit; text-decoration: none;">Nikhil
-									Raghav</a></strong>
-						</p>
-
-						<!-- Security Pill Badge -->
-						<div class="security-badge"
-							style="background: var(--bg-primary); border: 1px solid var(--border-color); padding: 10px 24px; border-radius: 50px; font-size: 0.85rem; display: inline-flex; align-items: center; gap: 12px; box-shadow: 0 4px 15px rgba(0,0,0,0.05); transition: all 0.3s ease;">
-							<div class="pulsing-dot"
-								style="width: 8px; height: 8px; background: var(--cyber-primary); border-radius: 50%; box-shadow: 0 0 10px var(--cyber-primary); animation: pulse 2s infinite;">
-							</div>
-							<span
-								style="color: var(--text-primary); font-weight: 600; text-transform: uppercase; letter-spacing: 1px;">Protected
-								by Advanced Security</span>
-						</div>
-					</div>
-				</div>
-			</div>
+	<!-- Footer -->
+	<footer class="footer-cyber">
+		<div class="container">
+			<p class="mb-1">© 2026 Nikhil Raghav — IT Support & Cybersecurity Specialist</p>
+			<p class="text-muted small mb-0">Engineered with Vanilla HTML5/CSS3 & JavaScript</p>
 		</div>
 	</footer>
+
+	<!-- Copy Notification Toast -->
+	<div id="cyberToast" class="toast-cyber">
+		<i class="fa-solid fa-circle-check text-green"></i> <span id="toastMsg">Copied to clipboard!</span>
+	</div>
 
 	<!-- Scripts -->
 	<script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
 	<script src="https://cdn.jsdelivr.net/npm/popper.js@1.16.1/dist/umd/popper.min.js"></script>
 	<script src="https://cdn.jsdelivr.net/npm/bootstrap@4.6.0/dist/js/bootstrap.min.js"></script>
-	<script src="https://cdnjs.cloudflare.com/ajax/libs/jquery-easing/1.4.1/jquery.easing.min.js"></script>
-	<script src="https://cdnjs.cloudflare.com/ajax/libs/stellar.js/0.6.1/jquery.stellar.min.js"></script>
 
+	<!-- Custom Interactivity Script -->
 	<script>
-
-
-		// Smooth Scrolling & Navbar
 		$(document).ready(function () {
-			$('body').scrollspy({ target: '#pb-navbar', offset: 100 });
-
-			$('a[href*="#"]').click(function (e) {
-				e.preventDefault();
-				const target = $($(this).attr('href'));
-				$('html, body').animate({ scrollTop: target.offset().top - 80 }, 1200, 'easeInOutCubic');
-				$('.navbar-collapse').collapse('hide');
-			});
-
-			// Navbar scroll effect
-			$(window).scroll(() => {
-				if ($(window).scrollTop() > 100) {
-					$('.navbar').addClass('scrolled');
+			// Navbar Scroll Effect
+			$(window).scroll(function () {
+				if ($(this).scrollTop() > 50) {
+					$('.navbar-cyber').addClass('scrolled');
 				} else {
-					$('.navbar').removeClass('scrolled');
+					$('.navbar-cyber').removeClass('scrolled');
 				}
 			});
 
-			// Contact form
+			// Smooth Scroll on nav clicks
+			$('.nav-link-cyber, a[href^="#"]').click(function (e) {
+				const target = $(this.getAttribute('href'));
+				if (target.length) {
+					e.preventDefault();
+					$('html, body').stop().animate({
+						scrollTop: target.offset().top - 70
+					}, 500);
+				}
+			});
+
+			// Filter Buttons Logic
+			$('.filter-btn').click(function () {
+				const filter = $(this).attr('data-filter');
+				$('.filter-btn').removeClass('active');
+				$(this).addClass('active');
+
+				if (filter === 'all') {
+					$('.filter-item').fadeIn(300);
+				} else {
+					$('.filter-item').hide();
+					$('.filter-item.' + filter).fadeIn(300);
+				}
+			});
+
+			// Copy-to-clipboard functionality
+			$('.copy-btn').click(function () {
+				const textToCopy = $(this).attr('data-copy');
+				navigator.clipboard.writeText(textToCopy).then(() => {
+					$('#toastMsg').text(`Copied '${textToCopy}' to clipboard!`);
+					$('#cyberToast').fadeIn(300).delay(2500).fadeOut(300);
+				});
+			});
+
+			// Contact Form Submission Handler
 			$('#contactForm').submit(function (e) {
 				e.preventDefault();
-				Swal.fire({
-					icon: 'success',
-					title: 'Mission Launched!',
-					text: 'Your message has been encrypted and transmitted. I will respond within 24 hours.',
-					timer: 3000
-				});
-				$(this)[0].reset();
+				$('#toastMsg').text('TRANSMISSION SUCCESSFUL // NIKHIL WILL RESPOND SHORTLY');
+				$('#cyberToast').fadeIn(300).delay(3500).fadeOut(300);
+				this.reset();
 			});
 
-			// Typing effect
-			const text = "IT Specialist";
-			let i = 0;
-			const typingElement = $('.lead');
-			const typeWriter = () => {
-				if (i < text.length) {
-					typingElement.html(text.substring(0, i + 1) + '<span class="blink">_</span>');
-					i++;
-					setTimeout(typeWriter, 100);
-				} else {
-					typingElement.html(text);
-				}
+			// Interactive CLI Terminal logic
+			const commands = {
+				'help': `Available Commands:
+  - whoami      : Display professional identity & profile overview
+  - experience  : Summary of 8+ years IT & security work history
+  - skills      : List key technical skills & defense capabilities
+  - certs       : View certifications & technical education
+  - contact     : Display direct contact details & location
+  - clear       : Clear the console window`,
+				'whoami': `NIKHIL RAGHAV
+Role: IT Support & Networking Specialist | Aspiring Cybersecurity Analyst
+Location: Palam Colony, New Delhi, India
+Status: Available for Security, IT Infrastructure & Engineering roles`,
+				'experience': `WORK HISTORY SUMMARY:
+  1. Freelance IT Consultant - Shriraghav Tech (2025 - Present)
+  2. Senior IT Technician - R.K. Computer (2019-2022, 2023-2025)
+  3. Digital Marketing & IT Consultant (2022 - 2023)
+  4. Webmaster - Black Motion Studio (2022 - 2024)
+  5. Contract Field Services Engineer - Nykaa (2022)
+  6. Freelance SEO Specialist - Lapocare (#1 Organic Rank)
+  7. CCTV Technician (2018 - 2019)`,
+				'skills': `TECHNICAL SKILLS:
+  - Security & Defense: Ethical Hacking, Firewalls, MFA, CCTV Security
+  - Infrastructure: Active Directory, DNS, DHCP, GPOs, Windows Server
+  - Network Admin: LAN/WAN, Routers, Switches, VPN, Troubleshooting
+  - Scripting & Dev: Python Automation, HTML5/CSS3, Web Development`,
+				'certs': `CERTIFICATIONS:
+  - Junior Cybersecurity Analyst (Cisco Networking Academy)
+  - MCSA: Windows Server 2012 (Microsoft Cert # G202-9754)
+  - Master in Digital Marketing (DIDM)
+  - Google Certified (Google Ads & GA4)
+  - Jetking Certified Hardware & Networking Engineer (JCHNE+)`,
+				'contact': `CONTACT INFO:
+  Phone    : +91 8512832150
+  Email    : iamnikhilraghav@gmail.com
+  Location : Palam Colony, New Delhi - 110045, India`
 			};
-			setTimeout(typeWriter, 1000);
 
-			// Parallax
-			$(window).stellar({
-				horizontalScrolling: false,
-				verticalOffset: 40
-			});
+			const terminalInput = $('#terminalInput');
+			const terminalBody = $('#terminalBody');
 
-			// Animate skills on scroll
-			const observerOptions = {
-				threshold: 0.1,
-				rootMargin: '0px 0px -50px 0px'
-			};
+			terminalInput.on('keypress', function (e) {
+				if (e.which === 13) {
+					const input = $(this).val().trim().toLowerCase();
+					$(this).val('');
 
-			const observer = new IntersectionObserver((entries) => {
-				entries.forEach(entry => {
-					if (entry.isIntersecting) {
-						entry.target.style.opacity = '1';
-						entry.target.style.transform = 'translateY(0)';
+					if (!input) return;
+
+					const promptLine = `<div><span class="text-cyan">nikhil@sec-ops:~$</span> ${input}</div>`;
+					terminalBody.append(promptLine);
+
+					if (input === 'clear') {
+						terminalBody.html(`SYSTEM OPERATIONAL (v2.4.0-release)\nType '<span class="text-cyan">help</span>' to list available commands.`);
+						return;
 					}
-				});
-			}, observerOptions);
 
-			// Observe all skill items
-			document.querySelectorAll('.resume-item, .feature-box, .skill-item').forEach(el => {
-				el.style.opacity = '0';
-				el.style.transform = 'translateY(50px)';
-				el.style.transition = 'all 0.8s cubic-bezier(0.4, 0, 0.2, 1)';
-				observer.observe(el);
+					const response = commands[input] || `Command not recognized: '${input}'. Type '<span class="text-cyan">help</span>' for a list of valid commands.`;
+					terminalBody.append(`<div class="terminal-output mb-2">${response}</div>`);
+
+					// Scroll to bottom
+					terminalBody.scrollTop(terminalBody[0].scrollHeight);
+				}
 			});
 		});
-
-		// Additional CSS for new elements (inline)
-		const style = document.createElement('style');
-		style.textContent = `
-		.progress { 
-			height: 8px; 
-			background: var(--border-color); 
-			border-radius: 10px; 
-			overflow: hidden; 
-		}
-		.bg-card {
-			background-color: var(--bg-card) !important;
-			color: var(--text-primary) !important;
-		}
-		.progress-bar { 
-			height: 100%; 
-			border-radius: 10px; 
-			transition: width 2s ease-in-out; 
-		}
-		.skill-item span { 
-			font-weight: 500; 
-			display: block; 
-			margin-bottom: 8px; 
-		}
-		.tech-badge { 
-			background: linear-gradient(45deg, var(--cyber-primary), var(--cyber-secondary)); 
-			color: white; 
-			padding: 8px 16px; 
-			border-radius: 25px; 
-			font-size: 0.85rem; 
-			font-weight: 500; 
-			transition: all 0.3s ease; 
-		}
-		.tech-badge:hover { 
-			transform: scale(1.05); 
-			box-shadow: 0 5px 15px rgba(0,212,255,0.4); 
-		}
-		.feature-box { 
-			background: var(--bg-card); 
-			border: 1px solid var(--border-color); 
-			border-radius: 20px; 
-			transition: all 0.4s ease; 
-			cursor: pointer; 
-		}
-		.feature-box:hover { 
-			transform: translateY(-10px); 
-			border-color: var(--cyber-primary); 
-			box-shadow: 0 20px 40px rgba(0,212,255,0.2); 
-		}
-		.contact-widget { 
-			border: 1px solid var(--border-color); 
-			height: fit-content; 
-			color: var(--text-primary) !important;
-		}
-		.contact-widget h3, .contact-widget h5, .contact-widget h6, .contact-widget p {
-			color: var(--text-primary) !important;
-		}
-		.blink { 
-			animation: blink 1s infinite; 
-		}
-		@keyframes blink { 
-			0%, 50% { opacity: 1; } 
-			51%, 100% { opacity: 0; } 
-		}
-		.navbar.scrolled { 
-			background: rgba(10,10,10,0.98) !important; 
-			padding: 0.5rem 0; 
-		}
-		@media (max-width: 768px) { 
-			.site-hero h1 { font-size: 2.5rem !important; } 
-			.cyber-map { height: 300px !important; }
-		}
-		[data-theme="dark"] .cyber-map iframe {
-			filter: invert(90%) hue-rotate(180deg) grayscale(20%);
-		}
-	`;
-		document.head.appendChild(style);
 	</script>
-
-	<!-- SweetAlert2 for notifications -->
-	<script src="https://cdn.jsdelivr.net/npm/sweetalert2@11"></script>
-
 </body>
 
 </html>
