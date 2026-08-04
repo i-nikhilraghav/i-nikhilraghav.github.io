@@ -1,0 +1,613 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Nikhil Raghav - Digital Portfolio & IT Specialist</title>
+    <meta name="description" content="Nikhil Raghav - 8+ Years IT Support, System Administration, Network Solutions, Web Development, and IT Consulting in Delhi NCR, India.">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Plus+Jakarta+Sans:wght@400;600;700;800&family=Fira+Code:wght@400;600&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    <link rel="stylesheet" href="css/dark-theme.css">
+    <style>
+        /* Hero Viewport Canvas */
+        .hero-viewport {
+            position: relative;
+            width: 100%;
+            max-width: 1000px;
+            min-height: 1050px;
+            margin: 40px auto 20px;
+            background: radial-gradient(circle at 50% 35%, #1a1a26 0%, var(--bg-dark) 75%);
+            border-radius: 28px;
+            overflow: hidden;
+            padding: 40px 20px;
+            display: flex;
+            flex-direction: column;
+            justify-content: space-between;
+            align-items: center;
+            box-shadow: 0 25px 60px rgba(0, 0, 0, 0.9);
+            border: 1px solid var(--border-color);
+        }
+
+        .top-greeting {
+            font-size: 5.5rem;
+            font-weight: 800;
+            text-transform: uppercase;
+            letter-spacing: 3px;
+            color: #f2efe9;
+            z-index: 3;
+            margin-top: 10px;
+            text-shadow: 0 5px 25px rgba(0, 0, 0, 0.6);
+        }
+
+        /* SVG Curved Overlay Path */
+        .svg-overlay {
+            position: absolute;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 100%;
+            pointer-events: none;
+            z-index: 2;
+        }
+
+        /* Center Portrait Wrapper */
+        .portrait-wrapper {
+            position: absolute;
+            top: 130px;
+            width: 100%;
+            max-width: 480px;
+            height: 720px;
+            display: flex;
+            justify-content: center;
+            z-index: 3;
+        }
+
+        .portrait-img {
+            width: 100%;
+            height: 100%;
+            object-fit: cover;
+            object-position: top;
+            filter: grayscale(90%) contrast(115%) brightness(95%);
+            mask-image: linear-gradient(to bottom, rgba(0,0,0,1) 75%, rgba(0,0,0,0) 100%);
+            -webkit-mask-image: linear-gradient(to bottom, rgba(0,0,0,1) 75%, rgba(0,0,0,0) 100%);
+            transition: filter 0.5s ease;
+        }
+
+        .portrait-wrapper:hover .portrait-img {
+            filter: grayscale(20%) contrast(110%) brightness(100%);
+        }
+
+        /* Curved Path Navigation Buttons */
+        .nav-button-pill {
+            position: absolute;
+            z-index: 5;
+            display: inline-flex;
+            align-items: center;
+            gap: 12px;
+            padding: 12px 24px;
+            background: rgba(18, 18, 24, 0.92);
+            border: 1.5px solid var(--border-color);
+            border-radius: 50px;
+            backdrop-filter: blur(12px);
+            -webkit-backdrop-filter: blur(12px);
+            font-size: 0.98rem;
+            font-weight: 700;
+            color: var(--text-main);
+            text-decoration: none;
+            box-shadow: 0 10px 25px rgba(0, 0, 0, 0.6);
+            transition: all 0.35s ease;
+            cursor: pointer;
+        }
+
+        .nav-button-pill i {
+            color: var(--accent-orange);
+            font-size: 1.1rem;
+            transition: transform 0.3s ease;
+        }
+
+        .nav-button-pill:hover {
+            transform: translateY(-4px) scale(1.03);
+            border-color: var(--accent-orange);
+            box-shadow: 0 12px 30px rgba(255, 69, 0, 0.4);
+            background: rgba(26, 26, 36, 0.95);
+            color: #ffffff;
+        }
+
+        .nav-button-pill:hover i {
+            transform: scale(1.2);
+        }
+
+        .nav-button-pill::before {
+            content: '';
+            display: inline-block;
+            width: 8px;
+            height: 14px;
+            background: linear-gradient(135deg, #ff7700, var(--accent-orange));
+            border-radius: 4px;
+            box-shadow: 0 0 12px var(--accent-orange);
+        }
+
+        /* Positions along Curved Path */
+        .nav-btn-it { top: 220px; right: 8%; }
+        .nav-btn-web { top: 370px; left: 6%; }
+        .nav-btn-sys { top: 520px; right: 6%; }
+        .nav-btn-net { top: 650px; left: 5%; }
+        .nav-btn-tech { top: 760px; right: 10%; }
+
+        /* Name Below Portrait */
+        .hero-title-container {
+            position: absolute;
+            bottom: 60px;
+            left: 6%;
+            z-index: 4;
+            text-align: left;
+        }
+
+        .hero-title-sub {
+            font-size: 3.8rem;
+            font-weight: 800;
+            line-height: 0.9;
+            color: var(--text-main);
+            display: block;
+        }
+
+        .hero-title-main {
+            font-size: 5.5rem;
+            font-weight: 800;
+            line-height: 0.95;
+            color: var(--accent-orange);
+            display: block;
+            text-shadow: 0 0 35px rgba(255, 69, 0, 0.35);
+            text-transform: uppercase;
+            letter-spacing: -1px;
+        }
+
+        /* CTA Link */
+        .cta-container {
+            position: absolute;
+            bottom: 70px;
+            right: 6%;
+            z-index: 4;
+            text-align: right;
+        }
+
+        .cta-link {
+            display: inline-flex;
+            align-items: center;
+            gap: 12px;
+            color: var(--text-main);
+            text-decoration: none;
+            font-size: 1.15rem;
+            font-weight: 700;
+            padding: 12px 20px;
+            background: rgba(255, 255, 255, 0.04);
+            border: 1px solid var(--border-color);
+            border-radius: 30px;
+            transition: all 0.3s ease;
+        }
+
+        .cta-link:hover {
+            color: var(--accent-orange);
+            border-color: var(--accent-orange);
+            background: rgba(255, 69, 0, 0.1);
+            transform: translateX(5px);
+        }
+
+        .cta-arrow {
+            font-size: 1.4rem;
+            color: var(--accent-orange);
+            transition: transform 0.3s ease;
+        }
+
+        .cta-link:hover .cta-arrow {
+            transform: translateX(4px);
+        }
+
+        /* Responsive */
+        @media (max-width: 900px) {
+            .hero-viewport { min-height: 980px; margin-top: 80px; }
+            .top-greeting { font-size: 4rem; }
+            .hero-title-sub { font-size: 2.8rem; }
+            .hero-title-main { font-size: 4.2rem; }
+            .nav-button-pill { padding: 9px 18px; font-size: 0.85rem; }
+            .nav-btn-it { top: 190px; right: 4%; }
+            .nav-btn-web { top: 330px; left: 3%; }
+            .nav-btn-sys { top: 470px; right: 3%; }
+            .nav-btn-net { top: 600px; left: 3%; }
+            .nav-btn-tech { top: 710px; right: 4%; }
+            .hero-title-container { bottom: 120px; left: 5%; }
+            .cta-container { bottom: 40px; right: auto; left: 5%; text-align: left; }
+        }
+
+        @media (max-width: 600px) {
+            .top-greeting { font-size: 3rem; }
+            .hero-title-sub { font-size: 2rem; }
+            .hero-title-main { font-size: 3rem; }
+            .nav-button-pill { padding: 8px 14px; font-size: 0.78rem; }
+        }
+    </style>
+</head>
+<body>
+
+    <!-- Header Navigation -->
+    <nav class="navbar-custom">
+        <div class="container">
+            <a href="index.html" class="brand-logo">
+                <i class="fa-solid fa-shield-halved"></i>
+                <span>NIKHIL RAGHAV</span>
+            </a>
+            <ul class="nav-links">
+                <li><a href="index.html" class="active">Home</a></li>
+                <li><a href="it-consulting.html">IT Consulting</a></li>
+                <li><a href="web-development.html">Web Dev</a></li>
+                <li><a href="system-administration.html">Sys Admin</a></li>
+                <li><a href="network-solutions.html">Networking</a></li>
+                <li><a href="tech-support.html">Tech Support</a></li>
+                <li><a href="#terminal">CLI Terminal</a></li>
+                <li><a href="#contact">Contact</a></li>
+            </ul>
+            <div class="status-pill">
+                <span class="pulse-dot"></span> SYSTEM OPERATIONAL
+            </div>
+        </div>
+    </nav>
+
+    <!-- Main Central Hero Container -->
+    <div class="container-custom" style="padding-top: 100px;">
+        <div class="hero-viewport">
+            
+            <!-- Curved Guide SVG Path -->
+            <svg class="svg-overlay" viewBox="0 0 900 1000" fill="none" xmlns="http://www.w3.org/2000/svg">
+                <path d="
+                    M 450 90
+                    C 560 95, 750 140, 790 225
+                    C 810 265, 790 285, 760 285
+                    C 720 285, 660 270, 600 290
+                    C 520 315, 430 355, 340 375
+                    C 260 392, 170 388, 130 400
+                    C 100 410, 98 425, 115 438
+                    C 140 455, 200 445, 270 465
+                    C 380 495, 510 530, 620 555
+                    C 710 575, 780 578, 800 595
+                    C 820 612, 800 628, 775 632
+                    C 730 638, 650 622, 570 638
+                    C 460 658, 340 698, 240 718
+                    C 175 732, 115 730, 100 745
+                    C 88 758, 98 774, 120 780
+                    C 155 790, 195 778, 220 785"
+                    stroke="rgba(255,255,255,0.4)"
+                    stroke-width="2.5"
+                    stroke-dasharray="6 6"
+                    stroke-linecap="round"
+                    fill="none"
+                />
+                <polygon points="215,797 220,782 225,797" fill="rgba(255,255,255,0.6)" />
+            </svg>
+
+            <!-- Greeting Header -->
+            <h1 class="top-greeting">Hello</h1>
+
+            <!-- Center Photo Wrapper -->
+            <div class="portrait-wrapper">
+                <img class="portrait-img" src="nikhil_raghav.png" alt="Nikhil Raghav Photo" onerror="this.src='images/nikhil_raghav.jpg'">
+            </div>
+
+            <!-- 5 Navigation Buttons along Curved Path -->
+            <a href="it-consulting.html" class="nav-button-pill nav-btn-it">
+                <i class="fa-solid fa-briefcase"></i> IT Consulting
+            </a>
+
+            <a href="web-development.html" class="nav-button-pill nav-btn-web">
+                <i class="fa-solid fa-code"></i> Web Development
+            </a>
+
+            <a href="system-administration.html" class="nav-button-pill nav-btn-sys">
+                <i class="fa-solid fa-server"></i> System Administration
+            </a>
+
+            <a href="network-solutions.html" class="nav-button-pill nav-btn-net">
+                <i class="fa-solid fa-network-wired"></i> Network Solutions
+            </a>
+
+            <a href="tech-support.html" class="nav-button-pill nav-btn-tech">
+                <i class="fa-solid fa-headset"></i> Tech Support
+            </a>
+
+            <!-- Prominent Name Below Photo -->
+            <div class="hero-title-container">
+                <span class="hero-title-sub">I'm</span>
+                <span class="hero-title-main">Nikhil<br>Raghav</span>
+            </div>
+
+            <!-- Call to Action Link -->
+            <div class="cta-container">
+                <a href="#contact" class="cta-link">
+                    Let's build your digital future
+                    <span class="cta-arrow">&rarr;</span>
+                </a>
+            </div>
+
+        </div>
+    </div>
+
+    <!-- Overview Stats Section -->
+    <section class="section-padding" style="background: rgba(19, 19, 23, 0.5);">
+        <div class="container-custom">
+            <div class="grid-3">
+                <div class="glass-card text-center">
+                    <div class="card-icon" style="margin: 0 auto 15px;"><i class="fa-solid fa-user-shield"></i></div>
+                    <h3 style="font-size: 2.2rem; font-weight: 800; color: var(--accent-orange);">8+</h3>
+                    <p class="card-text">Years Technical Experience</p>
+                </div>
+                <div class="glass-card text-center">
+                    <div class="card-icon" style="margin: 0 auto 15px;"><i class="fa-solid fa-certificate"></i></div>
+                    <h3 style="font-size: 2.2rem; font-weight: 800; color: var(--accent-cyan);">6+</h3>
+                    <p class="card-text">Industry Certifications (Cisco, MCSA, GA4)</p>
+                </div>
+                <div class="glass-card text-center">
+                    <div class="card-icon" style="margin: 0 auto 15px;"><i class="fa-solid fa-circle-check"></i></div>
+                    <h3 style="font-size: 2.2rem; font-weight: 800; color: var(--accent-green);">100%</h3>
+                    <p class="card-text">Client SLA Resolution Rate</p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Services Grid -->
+    <section class="section-padding">
+        <div class="container-custom">
+            <div class="section-header">
+                <span class="sub-title">Core Services</span>
+                <h2 class="main-title">Specialized IT Solutions</h2>
+            </div>
+            
+            <div class="grid-3">
+                <div class="glass-card">
+                    <div class="card-icon"><i class="fa-solid fa-briefcase"></i></div>
+                    <h3 class="card-title">IT Consulting</h3>
+                    <p class="card-text">Strategic technology planning, infrastructure audits, SMB hardware/software optimization, and data recovery solutions.</p>
+                    <a href="it-consulting.html" class="btn-outline-custom" style="padding: 8px 20px; font-size: 0.88rem;">Explore IT Consulting &rarr;</a>
+                </div>
+
+                <div class="glass-card">
+                    <div class="card-icon"><i class="fa-solid fa-code"></i></div>
+                    <h3 class="card-title">Web Development</h3>
+                    <p class="card-text">Responsive web applications, SEO ranking strategies (#1 Organic Rank), python scripts, and custom digital portals.</p>
+                    <a href="web-development.html" class="btn-outline-custom" style="padding: 8px 20px; font-size: 0.88rem;">Explore Web Dev &rarr;</a>
+                </div>
+
+                <div class="glass-card">
+                    <div class="card-icon"><i class="fa-solid fa-server"></i></div>
+                    <h3 class="card-title">System Administration</h3>
+                    <p class="card-text">Active Directory, GPO administration, Windows Server 2012 MCSA certified engineering, DNS/DHCP management.</p>
+                    <a href="system-administration.html" class="btn-outline-custom" style="padding: 8px 20px; font-size: 0.88rem;">Explore Sys Admin &rarr;</a>
+                </div>
+
+                <div class="glass-card">
+                    <div class="card-icon"><i class="fa-solid fa-network-wired"></i></div>
+                    <h3 class="card-title">Network Solutions</h3>
+                    <p class="card-text">Cisco Network Defense, enterprise routers/switches configuration, perimeter firewalls, and CCTV/IP surveillance setup.</p>
+                    <a href="network-solutions.html" class="btn-outline-custom" style="padding: 8px 20px; font-size: 0.88rem;">Explore Networking &rarr;</a>
+                </div>
+
+                <div class="glass-card">
+                    <div class="card-icon"><i class="fa-solid fa-headset"></i></div>
+                    <h3 class="card-title">Tech Support</h3>
+                    <p class="card-text">L1/L2 helpdesk resolution, component-level PC/laptop repairs, system imaging, and on-site field engineering.</p>
+                    <a href="tech-support.html" class="btn-outline-custom" style="padding: 8px 20px; font-size: 0.88rem;">Explore Tech Support &rarr;</a>
+                </div>
+
+                <div class="glass-card" style="border-color: var(--border-highlight);">
+                    <div class="card-icon" style="background: rgba(0, 242, 254, 0.1); color: var(--accent-cyan);"><i class="fa-solid fa-terminal"></i></div>
+                    <h3 class="card-title">CLI Terminal</h3>
+                    <p class="card-text">Execute CLI commands directly in your browser to inspect system credentials, career history, and technical skills.</p>
+                    <a href="#terminal" class="btn-primary-custom" style="padding: 8px 20px; font-size: 0.88rem;">Launch CLI Console &rarr;</a>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Interactive CLI Console -->
+    <section id="terminal" class="section-padding" style="background: rgba(13, 13, 17, 0.8);">
+        <div class="container-custom">
+            <div class="section-header">
+                <span class="sub-title">Interactive Console</span>
+                <h2 class="main-title">CLI Terminal Widget</h2>
+            </div>
+            
+            <div class="terminal-window">
+                <div class="terminal-header">
+                    <div class="terminal-dots">
+                        <span class="dot dot-red"></span>
+                        <span class="dot dot-yellow"></span>
+                        <span class="dot dot-green"></span>
+                    </div>
+                    <div class="terminal-title">nikhil-raghav@cyber-ops: ~</div>
+                    <div class="font-mono text-cyan" style="font-size: 0.78rem;">v3.0.0-release</div>
+                </div>
+                <div class="terminal-body" id="terminalBody">
+                    <div>SYSTEM OPERATIONAL (v3.0.0-release)</div>
+                    <div>Type '<span class="text-cyan">help</span>' to list available commands. Try '<span class="text-cyan">whoami</span>', '<span class="text-cyan">services</span>', '<span class="text-cyan">experience</span>', '<span class="text-cyan">skills</span>', '<span class="text-cyan">certs</span>', or '<span class="text-cyan">contact</span>'.</div>
+                </div>
+                <div class="terminal-input-row">
+                    <span class="terminal-prompt">nikhil@sec-ops:~$</span>
+                    <input type="text" id="terminalInput" class="terminal-input" placeholder="Type a command (e.g. help)..." autocomplete="off">
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Direct Contact Section -->
+    <section id="contact" class="section-padding">
+        <div class="container-custom">
+            <div class="section-header">
+                <span class="sub-title">Direct Transmission</span>
+                <h2 class="main-title">Get In Touch</h2>
+            </div>
+
+            <div class="grid-3 mb-5">
+                <div class="glass-card text-center">
+                    <div class="card-icon" style="margin: 0 auto 15px;"><i class="fa-solid fa-envelope"></i></div>
+                    <h4>Email Address</h4>
+                    <p class="font-mono text-muted" style="margin-bottom: 15px;">iamnikhilraghav@gmail.com</p>
+                    <button class="btn-outline-custom copy-btn" data-copy="iamnikhilraghav@gmail.com"><i class="fa-solid fa-copy"></i> Copy Email</button>
+                </div>
+
+                <div class="glass-card text-center">
+                    <div class="card-icon" style="margin: 0 auto 15px;"><i class="fa-solid fa-phone"></i></div>
+                    <h4>Phone / WhatsApp</h4>
+                    <p class="font-mono text-muted" style="margin-bottom: 15px;">+91 8512832150</p>
+                    <button class="btn-outline-custom copy-btn" data-copy="+918512832150"><i class="fa-solid fa-copy"></i> Copy Phone</button>
+                </div>
+
+                <div class="glass-card text-center">
+                    <div class="card-icon" style="margin: 0 auto 15px;"><i class="fa-solid fa-location-dot"></i></div>
+                    <h4>Location</h4>
+                    <p class="text-muted" style="margin-bottom: 15px;">Palam Colony, New Delhi - 110045, India</p>
+                    <a href="https://maps.google.com/?q=Palam+Colony+New+Delhi" target="_blank" class="btn-outline-custom"><i class="fa-solid fa-map-pin"></i> View Map</a>
+                </div>
+            </div>
+
+            <!-- Contact Form -->
+            <div style="max-width: 750px; margin: 0 auto;" class="glass-card">
+                <h3 style="text-align: center; margin-bottom: 25px;"><i class="fa-solid fa-paper-plane text-orange"></i> Send A Direct Message</h3>
+                <form id="contactForm">
+                    <div class="grid-2" style="gap: 15px;">
+                        <div class="form-group">
+                            <label>Your Name</label>
+                            <input type="text" class="form-control-custom" placeholder="John Doe" required>
+                        </div>
+                        <div class="form-group">
+                            <label>Your Email</label>
+                            <input type="email" class="form-control-custom" placeholder="john@example.com" required>
+                        </div>
+                    </div>
+                    <div class="form-group">
+                        <label>Subject</label>
+                        <input type="text" class="form-control-custom" placeholder="Service Inquiry / Technical Consultation" required>
+                    </div>
+                    <div class="form-group">
+                        <label>Message</label>
+                        <textarea class="form-control-custom" rows="4" placeholder="Hello Nikhil, I would like to discuss..." required></textarea>
+                    </div>
+                    <button type="submit" class="btn-primary-custom" style="width: 100%;"><i class="fa-solid fa-paper-plane"></i> Transmit Message</button>
+                </form>
+            </div>
+        </div>
+    </section>
+
+    <!-- Footer -->
+    <footer>
+        <div class="container-custom">
+            <p style="margin-bottom: 8px;">© 2026 Nikhil Raghav — IT Support & Cybersecurity Specialist</p>
+            <p class="text-muted" style="font-size: 0.82rem;">Engineered with Vanilla HTML5, CSS3 & JavaScript | Dark Mode Portfolio</p>
+        </div>
+    </footer>
+
+    <!-- Toast Notification -->
+    <div id="toast" class="toast-notification">
+        <i class="fa-solid fa-circle-check text-green"></i> <span id="toastMsg">Action completed!</span>
+    </div>
+
+    <!-- Scripts -->
+    <script>
+        const commands = {
+            'help': `Available Commands:
+  - whoami      : Display professional identity & overview
+  - services    : View 5 core IT & tech services
+  - experience  : Summary of 8+ years IT & network history
+  - skills      : List technical skills & defense capabilities
+  - certs       : View certifications & technical education
+  - contact     : Display direct contact details & location
+  - clear       : Clear terminal screen`,
+            'whoami': `NIKHIL RAGHAV
+Role: IT Support & Networking Specialist | Cybersecurity Analyst
+Location: Palam Colony, New Delhi, India
+Status: Available for Security, IT Infrastructure & Engineering roles`,
+            'services': `CORE SERVICES:
+  1. IT Consulting           [it-consulting.html]
+  2. Web Development         [web-development.html]
+  3. System Administration   [system-administration.html]
+  4. Network Solutions       [network-solutions.html]
+  5. Tech Support            [tech-support.html]`,
+            'experience': `WORK HISTORY SUMMARY:
+  1. Freelance IT Consultant - Shriraghav Tech (2025 - Present)
+  2. Senior IT Technician - R.K. Computer (2019-2022, 2023-2025)
+  3. Digital Marketing & IT Consultant (2022 - 2023)
+  4. Webmaster - Black Motion Studio (2022 - 2024)
+  5. Contract Field Services Engineer - Nykaa (2022)
+  6. Freelance SEO Specialist - Lapocare (#1 Organic Rank)
+  7. CCTV Technician (2018 - 2019)`,
+            'skills': `TECHNICAL SKILLS:
+  - Security & Defense: Ethical Hacking, Firewalls, MFA, CCTV Security
+  - Infrastructure: Active Directory, DNS, DHCP, GPOs, Windows Server
+  - Network Admin: LAN/WAN, Routers, Switches, VPN, Troubleshooting
+  - Scripting & Dev: Python Automation, HTML5/CSS3, Web Development`,
+            'certs': `CERTIFICATIONS:
+  - Junior Cybersecurity Analyst (Cisco Networking Academy)
+  - MCSA: Windows Server 2012 (Microsoft Cert # G202-9754)
+  - Master in Digital Marketing (DIDM)
+  - Google Certified (Google Ads & GA4)
+  - Jetking Certified Hardware & Networking Engineer (JCHNE+)`,
+            'contact': `CONTACT INFO:
+  Phone    : +91 8512832150
+  Email    : iamnikhilraghav@gmail.com
+  Location : Palam Colony, New Delhi - 110045, India`
+        };
+
+        const terminalInput = document.getElementById('terminalInput');
+        const terminalBody = document.getElementById('terminalBody');
+
+        if (terminalInput) {
+            terminalInput.addEventListener('keypress', function (e) {
+                if (e.key === 'Enter') {
+                    const input = this.value.trim().toLowerCase();
+                    this.value = '';
+
+                    if (!input) return;
+
+                    const promptLine = `<div><span class="terminal-prompt">nikhil@sec-ops:~$</span> ${input}</div>`;
+                    terminalBody.insertAdjacentHTML('beforeend', promptLine);
+
+                    if (input === 'clear') {
+                        terminalBody.innerHTML = `<div>SYSTEM OPERATIONAL (v3.0.0-release)</div><div>Type '<span class="text-cyan">help</span>' to list available commands.</div>`;
+                        return;
+                    }
+
+                    const response = commands[input] || `Command not recognized: '${input}'. Type '<span class="text-cyan">help</span>' for a list of valid commands.`;
+                    terminalBody.insertAdjacentHTML('beforeend', `<div style="color: #c0c0c8; margin-bottom: 8px;">${response.replace(/\n/g, '<br>')}</div>`);
+                    terminalBody.scrollTop = terminalBody.scrollHeight;
+                }
+            });
+        }
+
+        document.querySelectorAll('.copy-btn').forEach(btn => {
+            btn.addEventListener('click', function () {
+                const text = this.getAttribute('data-copy');
+                navigator.clipboard.writeText(text).then(() => {
+                    showToast(`Copied '${text}' to clipboard!`);
+                });
+            });
+        });
+
+        const contactForm = document.getElementById('contactForm');
+        if (contactForm) {
+            contactForm.addEventListener('submit', function (e) {
+                e.preventDefault();
+                showToast('TRANSMISSION SUCCESSFUL // Nikhil will respond shortly.');
+                this.reset();
+            });
+        }
+
+        function showToast(msg) {
+            const toast = document.getElementById('toast');
+            const toastMsg = document.getElementById('toastMsg');
+            toastMsg.innerText = msg;
+            toast.style.display = 'block';
+            setTimeout(() => { toast.style.display = 'none'; }, 3500);
+        }
+    </script>
+</body>
+</html>
